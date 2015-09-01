@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<trackings>
+    <tracking>
+        <name>Facebook Insights for Domains</name>
+        <desc>Facebook Insights provides Facebook Platform developers and Facebook Page owners with metrics around their content.</desc>
+        <icon>facebook</icon>
+        <pattern type="meta">fb:admins</pattern>
+        <pattern type="meta">fb:app_id</pattern>
+        <pattern type="meta">fb:page_id"</pattern>
+    </tracking>
+    <tracking>
+        <name>Google Analytics</name>
+        <desc>Google Analytics lets you measure your advertising ROI.</desc>
+        <icon>google-analytics</icon>
+        <pattern type="inline">google-analytics.com/</pattern>
+        <pattern type="header" regex="1">__utm[a-z]</pattern>
+    </tracking>
+    <tracking>
+        <name>Google Webmaster Tools</name>
+        <desc>Google Webmaster Tools provides you with detailed reports about your pages' visibility on Google.</desc>
+        <icon>google</icon>
+        <pattern type="meta">google-site-verification</pattern>
+    </tracking>
+    <tracking>
+        <name>Google Website Optimizer</name>
+        <desc>Google's free website testing and optimization tool.</desc>
+        <icon>google</icon>
+        <pattern type="inline">gwo.</pattern>
+    </tracking>
+    <tracking>
+        <name>Scorecard Research (comScore)</name>
+        <desc>comScore is a global leader in measuring the digital world and preferred source of digital business analytics.</desc>
+        <icon>comscore</icon>
+        <pattern>scorecardresearch.com/</pattern>
+    </tracking>
+    <tracking>
+        <name>Nielsen NetRatings</name>
+        <desc>Market research and buzz measurement products.</desc>
+        <icon>nielsen</icon>
+        <pattern>imrworldwide.</pattern>
+    </tracking>
+    <tracking>
+        <name>Quantcast</name>
+        <desc>Quantcast enables you to buy and sell targeted audiences in real time.</desc>
+        <icon>quantcast</icon>
+        <pattern>quantserve.com/</pattern>
+    </tracking>
+    <tracking>
+        <name>Gaug.es</name>
+        <desc>Gauges will update your traffic data in real-time, as people visit your site.</desc>
+        <icon>tracking</icon>
+        <pattern>gaug.es</pattern>
+    </tracking>
+    <tracking>
+        <name>HubSpot</name>
+        <desc>All-in-one Marketing Software gives you all the tools you need to make marketing people love.</desc>
+        <icon>hubspot</icon>
+        <pattern>hubspot.</pattern>
+    </tracking>
+    <tracking>
+        <name>New Relic</name>
+        <desc>New Relic is the only tool you need to pinpoint and solve performance issues.</desc>
+        <icon>newrelic</icon>
+        <pattern>newrelic.com</pattern>
+    </tracking>
+    <tracking>
+        <name>Alexa Analytics</name>
+        <desc>Alexa is the leading provider of free, global web metrics.</desc>
+        <icon>alexa</icon>
+        <pattern>alexa.com/siteinfo</pattern>
+    </tracking>
+    <tracking>
+        <name>Effective Measure</name>
+        <desc>Effective Measure is a world leading online Audience Measurement solution.</desc>
+        <icon>em</icon>
+        <pattern>effectivemeasure.net</pattern>
+    </tracking>
+    <tracking>
+        <name>Clicky</name>
+        <desc>Clicky Web Analytics is simply the best way to monitor, analyze, and react to your blog or web site's traffic in real time.</desc>
+        <icon>clicky</icon>
+        <pattern>getclicky.com/</pattern>
+    </tracking>
+    <tracking>
+        <name>ClickHeat</name>
+        <desc>ClickHeat is a visual heatmap of clicks on a HTML page, showing hot and cold click zones.</desc>
+        <icon>3c</icon>
+        <pattern regex="1">/clickheat[/\.]</pattern>
+    </tracking>
+    <tracking>
+        <name>Piwik</name>
+        <desc>Piwik is downloadable, Free/Libre (GPLv3 licensed) real time web analytics software.</desc>
+        <icon>piwik</icon>
+        <pattern regex="1">/piwik.php\?.*idsite</pattern>
+    </tracking>
+    <tracking>
+        <name>WordPress Stats</name>
+        <desc>Simple, concise stats with no additional load on your server.</desc>
+        <icon>wordpress</icon>
+        <pattern>stats.wordpress.com</pattern>
+    </tracking>
+    <tracking>
+        <name>Salesforce for Google AdWords</name>
+        <desc>Simple, concise stats with no additional load on your server.</desc>
+        <icon>salesforce</icon>
+        <pattern>lct.salesforce.com/sfga.js</pattern>
+    </tracking>
+    <tracking>
+        <name>Yandex Webmaster Tools</name>
+        <desc>Yandex Webmaster is a service that provides you with information about the indexing of your websites.</desc>
+        <icon>yandex</icon>
+        <pattern type="meta">yandex-verification</pattern>
+    </tracking>
+    <tracking>
+        <name>Yandex Metrika</name>
+        <desc>Yandex Metrica is a tool that measures website traffic, analyzes user behaviour and ad efficiency.</desc>
+        <icon>yandex</icon>
+        <pattern>yandex.ru/metrika/</pattern>
+    </tracking>
+    <tracking>
+        <name>Eloqua</name>
+        <desc>Eloqua is a leader in providing Internet Marketing solutions.</desc>
+        <icon>eloqua</icon>
+        <pattern regex="1">/elq.*\.js</pattern>
+    </tracking>
+    <tracking>
+        <name>Olark</name>
+        <desc>Live chat and real-time monitoring of your website visitors so you can sell better and provide excellent support.</desc>
+        <icon>olark</icon>
+        <pattern>olark.com/jsclient/</pattern>
+    </tracking>
+    <tracking>
+        <name>GoSquared</name>
+        <desc>GoSquared real-time web analytics - turn visitors into customers.</desc>
+        <icon>gosquared</icon>
+        <pattern type="inline">GoSquared.acct</pattern>
+    </tracking>
+    <tracking>
+        <name>Compete</name>
+        <desc>Drive your search marketing, business development, media planning and competitive strategy with the most powerful data on the planet.</desc>
+        <icon>compete</icon>
+        <pattern>compete.com/bootstrap</pattern>
+    </tracking>
+    <tracking>
+        <name>Webtrends</name>
+        <desc>Webtrends dramatically improves digital marketing results for many of the world's most admired and innovative companies.</desc>
+        <icon>webtrends</icon>
+        <pattern>/webtrends-</pattern>
+        <pattern>webtrendslive.com/</pattern>
+    </tracking>
+    <tracking>
+        <name>SiteCatalyst</name>
+        <desc>Adobe's SiteCatalyst powered by Omniture provides powerful multi-channel analytics and segmentation.</desc>
+        <icon>sitecatalyst</icon>
+        <pattern type="comment">SiteCatalyst</pattern>
+        <pattern regex="1">s\.pageName\s*=</pattern>
+    </tracking>
+    <tracking>
+        <name>Histats</name>
+        <desc>Free web stats and stat counter, hit counter, free web tracker and tracking tools, stats counter.</desc>
+        <icon>tracking</icon>
+        <pattern>histats.</pattern>
+    </tracking>
+    <tracking>
+        <name>StatCounter</name>
+        <desc>A free yet reliable invisible web tracker, highly configurable hit counter and real- time detailed web stats.</desc>
+        <icon>statcounter</icon>
+        <pattern>statcounter.</pattern>
+    </tracking>
+    <tracking>
+        <name>AT Internet/Xiti</name>
+        <desc>Web, Mobile and Social Analytics solutions to measure web and mobile site traffic.</desc>
+        <icon>xiti</icon>
+        <pattern>xiti.com/</pattern>
+    </tracking>
+    <tracking>
+        <name>Cedexis</name>
+        <desc>Cedexis offers strategies and solutions for multi-platform content &amp; application delivery to companies focused on maximizing web performance.</desc>
+        <icon>cedexis</icon>
+        <pattern>cedexis.com/</pattern>
+    </tracking>
+    <tracking>
+        <name>Tynt</name>
+        <desc>Improve your seo, keep users longer and measure your user engagement by leveraging the power of copy and paste..</desc>
+        <icon>tracking</icon>
+        <pattern>tynt.com/</pattern>
+    </tracking>
+    <tracking>
+        <name>Optimizely</name>
+        <desc>Optimize your conversion rate in minutes by running an AB Test, Split Test or  Multivariate Testing with Optimizely!.</desc>
+        <icon>tracking</icon>
+        <pattern>optimizely.com/</pattern>
+    </tracking>
+    <tracking>
+        <name>VisiStats</name>
+        <desc>VisiStat's Web Analytics platform provides key information and real-time insights  for monitoring your traffic, visitor behavior and SEO effectiveness.</desc>
+        <icon>tracking</icon>
+        <pattern>visistat.com/</pattern>
+    </tracking>
+    <tracking>
+        <name>Marketo</name>
+        <desc>Powerful and easy B2B marketing automation software that helps marketing and  sales professionals drive revenue and improve marketing accountability.</desc>
+        <icon>tracking</icon>
+        <pattern>marketo.net/</pattern>
+    </tracking>
+</trackings>

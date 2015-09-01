@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<frameworks>
+    <framework>
+        <name>CodeIgniter</name>
+        <desc>CodeIgniter is an open source Web Application Framework that helps you write PHP programs.</desc>
+        <icon>codeigniter</icon>
+        <pattern type="header">set-cookie: ci_session</pattern>
+    </framework>
+    <framework>
+        <name>Google Web Toolkit </name>
+        <desc>GWT is an open source Java software development framework.</desc>
+        <icon>gwt</icon>
+        <pattern type="meta">name="gwt:</pattern>
+    </framework>
+    <framework>
+        <name>Zend Framework</name>
+        <desc>Zend Framework is based on simplicity, object-oriented best practices, corporate friendly licensing, ...</desc>
+        <icon>zf</icon>
+        <pattern type="header" regex="1">x-powered-by: .*zend framework ([\d\.]*)\s</pattern>
+    </framework>
+    <framework>
+        <name>Ruby On Rails</name>
+        <desc>Web application framework optimized for sustainable  programming productivity, allows writing sound code by favoring convention over configuration.</desc>
+        <icon>ror</icon>
+        <pattern type="header">X-Runtime:</pattern>
+    </framework>
+    <framework>
+        <name>Django</name>
+        <desc>Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.</desc>
+        <icon>django</icon>
+        <pattern type="header">set-cookie: django_</pattern>
+    </framework>
+</frameworks>

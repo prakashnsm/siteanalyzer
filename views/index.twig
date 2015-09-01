@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>SiteAlyzer: The Website Analyzer</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+
+<body>
+
+<div class='container'><div class='row'><div class='span8 offset2'>
+
+    <div class='header'>
+        <a href='/'><img src='images/logo.png'></a><h1><span class='title'>SiteAnalyzer</span> <span class='subtitle'>The Website Analyzer</span></h1>
+        <p class='copy'>Copyright &copy; <?= date('Y') ?> <a class='email' href='mailto:prakash.nsm@gmail.com?subject=site-analyzer'>prakash.nsm</a></p>
+    </div>
+
+    <form class="form-inline" action="check" method="get">
+        Website: &nbsp;&nbsp;<input class='span6' type="text" name="url" value="{{ url }}">
+        <input class='btn-primary' type="submit" value="Analyze">
+    </form>
+
+    <div class='try'>Ex:
+    <a href="{{ check_url }}http://www.wunderground.com">Weather Underground</a>,
+    <a href="{{ check_url }}http://www.cnet.com">CNET</a>,
+    <a href="{{ check_url }}http://www.mashable.com">Mashable</a>, or a
+    <a href="{{ check_url }}random">Random Top 1000 Site</a>
+    </div>
+
+{% if message %}
+    <div class='error'>{{ message }}</div>
+{% endif %}
+
+{% if not results %}
+    <div class='row blurb'>
+        {# blurb copied from wapplayer.com :) #}
+        <h4>What is SiteAlyzer?</h4>
+        <p>SiteAlyzer uncovers the technologies used on websites. It detects content management systems, web shops, web servers, JavaScript frameworks, analytics tools and many more.</p>
+    </div>
+{%  endif %}
+
+{% if results and not error %}
+
+<h3>Analysis of <span class='url'><a href='{{ url }}' target='_blank'>{{ url }}</a></span></h3>
+    {% if not results %}
+        <h3>Nothing Found.</h3>
+    {% else %}
+        {% for title, groups in results %}
+            {% if groups %}
+                <p class='group'>{{ title }}</p>
+                <ul>{% for group in groups %}
+                <li>
+                <img width='16' height='16' src='images/icons/{{ group.icon != '' ? group.icon : "page_white_text" }}.ico'>&nbsp;
+                <span class='name'>{{ group.name }}</span> <span class='ver'>{{ group.ver }}</span>
+                <p>{{ group.desc }}</p>
+                </li>
+                {% endfor %}</ul>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    <hr/>
+
+    <ul>
+        <li>Page analyzed in: <b>{{ analysis_time }} secs.</b></li>
+        <li>Page downloaded in:
+        {% if http.total_time >= 0 %}
+            <b>{{ total_time }} secs.</b>
+        {% else %}
+            <span class='na'>FOUND IN CACHE</span>
+        {% endif %}
+        </li>
+        <li>Page download speed:
+        {% if http.speed_download >= 0 %}
+            <b>{{ speed_download }}/s</b>
+        {% else %}
+            <span class='na'>N/A</span>
+        {% endif %}
+        </li>
+        {% if http.gzip and is_float(http.total_time) %}
+        <li>Page size (gzip) is: <b>{{ size_download_gzip }} ({{ size_download_gzip2 }} bytes)</b></li>
+        {% endif %}
+        <li>Page size is: <b>{{ size_download }} ({{ size_download2 }} bytes)</b></li>
+        </ul>
+
+        <form class='form2' action="check" method="get">
+            <input type='hidden' name='refresh' value='1'>
+            <input type='hidden' name='url' value=' {{ url }}'>
+            <input class='btn-mini' type="submit" value="Refresh Page">
+        </form>
+
+{% endif %}
+
+    </div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+body {
+    margin-top: 10px;
+}
+
+ul {
+    margin: 0 ;
+}
+
+li {
+    margin: 4px 0px;
+    list-style-type: none;
+}
+
+.name, .ver {
+    color: #2929FE;
+    font-weight: bold;
+    font-family: verdana;    
+}
+
+/*
+.ver {
+    color: #9999CC;    
+}
+*/
+.group {    
+    background-color: #ccc;    
+    padding-left: 4px;
+    font-weight: bold;
+}
+
+.title {
+    color: #BA1DBF; /*#669966;*/
+}
+
+.subtitle, .email {
+    color: #aaa;
+}
+
+.error {
+    text-align: center;
+    margin-top: 20px;
+    color: #f00;
+    font-weight: bold;
+}
+
+h1 {
+    padding-top: 14px;
+}
+
+h3 {
+    margin: 20px 0;
+}
+
+hr {
+    margin-bottom: 30px;
+    margin-top: 30px;   
+    color:black;
+}
+
+.copy {
+    color: #aaa;
+    font-family: verdana;
+    padding-top: 10px;
+    text-align: left;
+}
+
+h4  {   
+    margin-bottom: 20px;
+}
+
+.blurb {
+    margin-top: 30px;
+    margin-left: 0px;
+}
+
+.header {    
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.header >img {
+    float: left;
+}
+
+.form2 {
+    display: inline;
+}
+
+.na{
+    font-size: 88%;
+    color: gray;
+}
+
+
+.try {    
+    margin-top: -14px;
+    margin-left: 68px;
+}
+
+.url a:link, .url a:visited, .url a:hover {
+    color: #996666;   
+}
+
+a > img {
+    float: left;
+}

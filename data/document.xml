@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<docinfo>
+    <doc>
+        <name/>
+        <desc>Document Type Declaration (DTD) declares what version of HTML is used in the document.</desc>
+        <icon>html</icon>
+        <pattern type="doctype" regex="1">//DTD (.*)//</pattern>
+    </doc>
+    <doc>
+        <name/>
+        <desc>The character encoding of the document.</desc>
+        <pattern type="meta" regex="1">charset="?(.*?)"</pattern>
+    </doc>
+    <doc>
+        <name>Javascript</name>
+        <desc>A popular programming language that is supported in popular Web browsers and other Web tools.</desc>
+        <icon>javascript</icon>
+        <pattern type="xpath">//script[@type='text/javascript'][1]</pattern>
+        <pattern type="xpath">//script[1]</pattern>
+        <!-- inline script (ex: youtube) -->
+    </doc>
+    <doc>
+        <name>Cascading Style Sheet</name>
+        <desc>CSS allows the separation of presentation from structure</desc>
+        <icon>css</icon>
+        <pattern type="link">text/css</pattern>
+        <pattern type="link">rel="stylesheet"</pattern>
+        <pattern type="xpath">//style[@type='text/css'][1]</pattern>
+    </doc>
+    <doc>
+        <name>Favicon</name>
+        <desc>A file containing one or more small icons, most commonly 16x16 pixels.</desc>
+        <pattern type="link">image/x-icon</pattern>
+        <pattern type="link">rel="icon"</pattern>
+        <pattern type="link">rel="shortcut icon"</pattern>
+    </doc>
+    <doc>
+        <name>Image Map</name>
+        <desc>The HTML map element creates a client-side image map.</desc>
+        <pattern type="xpath">//map[1]</pattern>
+    </doc>
+    <doc>
+        <name>Conditional Comments</name>
+        <desc>Conditional statements interpreted by Microsoft Internet Explorer in HTML source code.</desc>
+        <pattern type="comment">!--[if</pattern>
+        <pattern type="comment">![if</pattern>
+    </doc>
+    <doc>
+        <name>Canonical URL</name>
+        <desc>A canonical page is the preferred version of a set of pages with highly similar content.</desc>
+        <icon>url</icon>
+        <pattern type="link">rel="canonical"</pattern>
+    </doc>
+    <doc>
+        <name>Mobile Compatible</name>
+        <desc>Style sheets for different media types.</desc>
+        <icon>mobile</icon>
+        <pattern type="link"> media="</pattern>
+    </doc>
+    <doc>
+        <name>Apple Touch Icon</name>
+        <desc>An icon for a web application used to represent it when added to the Home screen on iOS.</desc>
+        <icon>iphone</icon>
+        <pattern type="link">rel="apple-touch-icon</pattern>
+    </doc>
+    <doc>
+        <name>OpenID</name>
+        <desc>OpenID is a safe, faster and easier way to log in to web sites..</desc>
+        <icon>openid</icon>
+        <pattern type="link">rel="openid</pattern>
+    </doc>
+    <doc>
+        <name>Open Graph Protocol</name>
+        <desc>Enables any web page to become a rich object in a social graph..</desc>
+        <icon>ogp</icon>
+        <pattern type="meta">og:</pattern>
+        <pattern type="header">xmlns:og</pattern>
+        <pattern type="header">og:</pattern>
+    </doc>
+    <doc>
+        <name>OpenSearch</name>
+        <desc>A collection of technologies that allow publishing of search results  in a format suitable for syndication and aggregation.</desc>
+        <icon>opensearch</icon>
+        <pattern type="link">application/opensearchdescription+xml</pattern>
+    </doc>
+    <doc>
+        <name>GeoURL</name>
+        <desc>GeoURL is a location-to-URL reverse directory.</desc>
+        <icon>geourl</icon>
+        <pattern type="meta">name="icbm"</pattern>
+        <pattern type="meta">name="geo.position"</pattern>
+    </doc>
+    <doc>
+        <name>Yadis</name>
+        <desc>Yadis is a communications protocol for discovery of services such as OpenID, OAuth, and XDI connected to a Yadis ID.</desc>
+        <pattern type="header">X-XRDS-Location:</pattern>
+        <pattern type="meta">http-equiv="X-XRDS-Location"</pattern>
+        <pattern type="link">application/xrds+xml</pattern>
+    </doc>
+    <doc>
+        <name>Restricted to Adults</name>
+        <desc>RTA enables parental filtering and work to enforce the prevention of children from viewing age inappropriate content.</desc>
+        <icon>rta</icon>
+        <pattern type="meta">RTA-5042-1996-1400-1577-RTA</pattern>
+    </doc>
+    <doc>
+        <name>Creative Commons</name>
+        <desc>Creative Commons licenses provide a flexible range of protections and freedoms  for authors, artists, and educators.</desc>
+        <icon>cc</icon>
+        <pattern>creativecommons.org/licenses</pattern>
+    </doc>
+    <doc>
+        <name>X-Frame-Options</name>
+        <desc>Indicates whether or not a browser should be allowed to render a page in a frame or iframe.</desc>
+        <pattern type="header">x-frame-options: </pattern>
+    </doc>
+    <doc>
+        <name>PURL</name>
+        <desc>A persistent uniform resource locator (PURL) is a Uniform Resource Locator (URL) (i.e. location-based Uniform Resource Identifier or URI) that is used to redirect to the location of the requested Web resource.</desc>
+        <icon/>
+        <pattern type="head">purl.org/</pattern>
+    </doc>
+    <doc>
+        <name>XHTML Vocabulary</name>
+        <desc>This is a vocabulary collection utilized by XHTML Family.</desc>
+        <icon/>
+        <pattern type="head">w3.org/1999/xhtml/vocab</pattern>
+    </doc>
+</docinfo>

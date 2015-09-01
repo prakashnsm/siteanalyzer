@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<payments>
+    <payment>
+        <name>Paypal</name>
+        <desc>PayPal is the faster, safer way to send money, make an online payment, receive money or set up a merchant account</desc>
+        <icon>paypal</icon>
+        <pattern>paypal.com/cgi-bin/webscr</pattern>
+    </payment>
+</payments>

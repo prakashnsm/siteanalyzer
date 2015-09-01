@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<cmss>
+    <cms>
+        <name>WordPress</name>
+        <desc>A semantic personal publishing platform with a focus on aesthetics, web standards, and usability.</desc>
+        <icon>wordpress</icon>
+        <pattern type="meta" regex="1">generator.*wordpress(\s*[a-zA-Z\d\.]*)</pattern>
+        <pattern>/wp-content/</pattern>
+        <pattern>/wp-includes/</pattern>
+    </cms>
+    <cms>
+        <name>Wordpress Plugins</name>
+        <desc>Plugins to extend the functionality of WordPress.</desc>
+        <icon>wordpress</icon>
+        <pattern>/wp-content/plugins</pattern>
+        <pattern>/wp-content/mu-plugins</pattern>
+    </cms>
+    <cms>
+        <name>Joomla!</name>
+        <desc>The dynamic portal engine and content management system.</desc>
+        <icon>joomla</icon>
+        <pattern type="meta" regex="1">generator.* joomla!(\s*[a-zA-Z\d\.]*)</pattern>
+        <pattern type="header" regex="1">x-content-encoded-by: joomla! (.*)</pattern>
+    </cms>
+    <cms>
+        <name>Joom!Fish</name>
+        <desc>Joom!Fish project website for the internationalization (i18n) extension within the  CMS Joomla!.</desc>
+        <icon>joomla</icon>
+        <pattern type="header">set-cookie: jfcookie</pattern>
+    </cms>
+    <cms>
+        <name>Drupal</name>
+        <desc>Drupal is a free and open-source content management system (CMS) and content management framework (CMF) written in PHP.</desc>
+        <icon>drupal</icon>
+        <pattern type="meta" regex="1">generator.*drupal["\!\s][\s]?(\d*)</pattern>
+        <pattern type="header">x-drupal-cache</pattern>
+        <pattern type="inline">drupal.settings</pattern>
+    </cms>
+    <cms>
+        <name>MediaWiki</name>
+        <desc>MediaWiki is a free web-based wiki software application. Developed by the  Wikimedia Foundation and others.</desc>
+        <icon>mediawiki</icon>
+        <pattern type="meta" regex="1">mediawiki(\s[\d\.]*)</pattern>
+    </cms>
+    <cms>
+        <name>Posterous</name>
+        <desc>Posterous Spaces is the easiest way to share  safely online.</desc>
+        <icon>posterous</icon>
+        <pattern type="header">x-Posterous</pattern>
+        <pattern type="meta">"Posterous"</pattern>
+    </cms>
+    <cms>
+        <name>Tiki Wiki</name>
+        <desc>Tiki is a powerful all-in-one web-based application, offering collaboration, publishing, commerce, social networking, CRM and office productivity tools.</desc>
+        <icon>tiki</icon>
+        <pattern type="meta">Tiki Wiki CMS Groupware</pattern>
+        <pattern>/tiki-js.js</pattern>
+    </cms>
+    <cms>
+        <name>TYPO3 CMS</name>
+        <desc>Tiki is a powerful all-in-one web-based application, offering collaboration, publishing, commerce, social networking, CRM and office productivity tools.</desc>
+        <icon>typo3</icon>
+        <pattern type="meta" regex="1">TYPO3 (.*) CMS</pattern>
+        <pattern type="header">X-T3C</pattern>
+    </cms>
+    <cms>
+        <name>DataLife Engine</name>
+        <desc>SoftNews Media PHP CMS</desc>
+        <icon>datalife</icon>
+        <pattern type="meta">="DataLife Engine</pattern>
+    </cms>
+    <cms>
+        <name>Expression Engine</name>
+        <desc>ExpressionEngine, the most compelling content management system on the market.</desc>
+        <icon>expressionengine</icon>
+        <pattern type="header">set-cookie: exp_</pattern>
+    </cms>
+    <cms>
+        <name>DotNetNuke</name>
+        <desc>DotNetNuke is the leading open source ASP.NET CMS.</desc>
+        <icon>dotnetnuke</icon>
+        <pattern type="meta">="DotNetNuke</pattern>
+        <pattern type="header">set-cookie: dotnetnuke</pattern>
+        <pattern>/dnncore.js</pattern>
+    </cms>
+</cmss>

@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<servers>
+    <server>
+        <name>Apache</name>
+        <desc>The Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server.</desc>
+        <icon>apache</icon>
+        <pattern type="header" regex="1">server: apache/(.*?)\s</pattern>
+        <pattern type="header">server: apache</pattern>
+    </server>
+    <server>
+        <name>Apache Tomcat Coyote</name>
+        <desc>Coyote is Tomcat's HTTP Connector component that supports the HTTP 1.1 protocol for the web server or application container.</desc>
+        <icon>tomcat</icon>
+        <pattern type="header" regex="1">server: apache-coyote/?(.*?)\s</pattern>
+    </server>
+    <server>
+        <name>lighttpd</name>
+        <desc>Lightweight open-source web server.</desc>
+        <icon>lighttpd</icon>
+        <pattern type="header" regex="1">server: lighttpd/?(.*?)\s</pattern>
+    </server>
+    <server>
+        <name>Nginx</name>
+        <desc>Nginx is a free, open-source, high-performance HTTP server.</desc>
+        <icon>nginx</icon>
+        <pattern type="header" regex="1">server: nginx[\/|_]?.*?([\d\.]*)</pattern>
+        <pattern type="header">nginx</pattern>
+    </server>
+    <server>
+        <name>Google Web Server</name>
+        <desc>Custom Linux-based Web server that Google uses for its online services.</desc>
+        <icon>google</icon>
+        <pattern type="header">server: gse</pattern>
+        <pattern type="header">server: gws</pattern>
+        <pattern type="header">server: sffe</pattern>
+    </server>
+    <server>
+        <name>Microsoft IIS</name>
+        <desc>Internet Information Services is a flexible, secure and easy-to-manage Web server for hosting anything on the Web.</desc>
+        <icon>iis</icon>
+        <pattern type="header" regex="1">server: microsoft-iis/?(.*?)\s</pattern>
+    </server>
+    <server>
+        <name>Unix</name>
+        <desc>Unix is a multitasking, multi-user computer operating system.</desc>
+        <icon>server</icon>
+        <pattern type="header" regex="1">server: .*unix</pattern>
+    </server>
+    <server>
+        <name>Linux</name>
+        <desc>Unix-like computer operating system assembled under the model of  free and open source software development and distribution.</desc>
+        <icon>server</icon>
+        <pattern type="header" regex="1">server: .*linux/?</pattern>
+    </server>
+    <server>
+        <name>Ubuntu</name>
+        <desc>Commercially sponsored Debian-derived Linux distribution that focuses on usability.</desc>
+        <icon>ubuntu</icon>
+        <pattern type="header" regex="1">x-powered-by: .*ubuntu([0-9\.]*)?</pattern>
+        <pattern type="header">ubuntu</pattern>
+    </server>
+    <server>
+        <name>Rack Cache</name>
+        <desc>Rack::Cache is suitable as a quick drop-in component to enable HTTP caching for Rack-based applications.</desc>
+        <icon>server</icon>
+        <pattern type="header">x-rack-cache: </pattern>
+    </server>
+    <server>
+        <name>Varnish</name>
+        <desc>Varnish is a web application accelerator.</desc>
+        <icon>varnish</icon>
+        <pattern type="header">x-varnish: </pattern>
+        <pattern type="header" regex="1">via: (.*) varnish</pattern>
+    </server>
+    <server>
+        <name>Apache Traffic Server</name>
+        <desc>Apache Traffic Server(tm) software is a fast, scalable and extensible HTTP/1.1 compliant caching proxy server.</desc>
+        <icon>ats</icon>
+        <pattern type="header" regex="1">server: [y|a]ts/?([a-zA-z\d\.]*)</pattern>
+    </server>
+    <server>
+        <name>LiteSpeed</name>
+        <desc>LiteSpeed - the ultimate solution for your web infrastructure.</desc>
+        <icon>litespeed</icon>
+        <pattern type="header">server: litespeed</pattern>
+    </server>
+    <server>
+        <name>Fedora</name>
+        <desc>A Linux based operating system.</desc>
+        <icon>fedora</icon>
+        <pattern type="header" regex="1">server: .*fedora</pattern>
+    </server>
+    <server>
+        <name>CentOS</name>
+        <desc>CentOS is an Enterprise-class Linux Distribution derived from sources freely provided to the public by a prominent North American Enterprise Linux vendor.</desc>
+        <icon>server</icon>
+        <pattern type="header" regex="1">server: .*centos</pattern>
+    </server>
+    <server>
+        <name>Debian</name>
+        <desc>Debian is an operating system and a distribution of Free Software.</desc>
+        <icon>debian</icon>
+        <pattern type="header" regex="1">server: .*debian</pattern>
+    </server>
+    <server>
+        <name>PHP</name>
+        <desc>PHP is a widely-used general-purpose scripting language that is especially suited for Web development.</desc>
+        <icon>php</icon>
+        <pattern type="header" regex="1">x-powered-by: php/?([a-zA-z\d\.]*)</pattern>
+        <pattern type="header" regex="1">server: .*php/?([a-zA-z\d\.]*)</pattern>
+        <pattern type="header">set-cookie: phpsessid</pattern>
+    </server>
+    <server>
+        <name>Perl</name>
+        <desc>Perl is a high-level, general-purpose, interpreted, dynamic programming language.</desc>
+        <icon>perl</icon>
+        <pattern type="header" regex="1">server: .*perl/?([a-zA-z\d\.]*)</pattern>
+    </server>
+    <server>
+        <name>Python</name>
+        <desc>Python is an interpreted, interactive, object-oriented, extensible  programming language.</desc>
+        <icon>python</icon>
+        <pattern type="header" regex="1">server: .*python/?([a-zA-z\d\.]*)</pattern>
+    </server>
+    <server>
+        <name>ASP.NET</name>
+        <desc>ASP.NET is a free web framework for building great Web sites and Web applications.</desc>
+        <icon>asp.net</icon>
+        <pattern type="header" regex="1">x-aspnet-version: (.*)</pattern>
+        <pattern type="header">x-powered-by: asp.net</pattern>
+    </server>
+    <server>
+        <name>J2EE</name>
+        <desc>The Java 2 Platform, Enterprise Edition (J2EE) defines the standard for developing multitier enterprise applications.</desc>
+        <icon>java</icon>
+        <pattern type="header">set-cookie: jsessionid</pattern>
+    </server>
+    <server>
+        <name>OpenSSL</name>
+        <desc>A toolkit implementing SSL v2/v3 and TLS protocols with full-strength cryptography world-wide.</desc>
+        <icon>ssl</icon>
+        <pattern type="header" regex="1">server: .*openssl/?([a-zA-z\d\.]*)</pattern>
+    </server>
+    <server>
+        <name>FrontPage Extension</name>
+        <desc>A software technology that allows Microsoft FrontPage clients to communicate with web servers.</desc>
+        <icon>windows</icon>
+        <pattern type="header" regex="1">server: .*frontpage\/?(.*?)\s</pattern>
+    </server>
+    <server>
+        <name>mod_ssl</name>
+        <desc>This module provides strong cryptography for the Apache webserver.</desc>
+        <icon>mod_</icon>
+        <pattern type="header" regex="1">server: .*mod_ssl\/?(.*?)\s</pattern>
+    </server>
+    <server>
+        <name>WebDAV</name>
+        <desc>Web Distributed Authoring and Versioning (WebDAV) is an extension of the Hypertext Transfer Protocol.</desc>
+        <pattern type="header" regex="1">server: .*dav/?([0-9]*)</pattern>
+    </server>
+    <server>
+        <name>P3P Policy</name>
+        <desc>Platform for Privacy Preferences Project (P3P) is a protocol allowing websites to declare their intended use of information they collect about web browser users.</desc>
+        <icon>p3p</icon>
+        <pattern type="header">p3p: </pattern>
+    </server>
+    <server>
+        <name>Google App Engine</name>
+        <desc>Offers users the ability to build and host web applications on Google's  infrastructure.</desc>
+        <icon>gae</icon>
+        <pattern type="header" regex="1">set-cookie: googappuid</pattern>
+        <pattern type="header">server: google frontend</pattern>
+    </server>
+    <server>
+        <name>Zend Server</name>
+        <desc>Leverage the power of Zend Server to run your Business-Critical PHP applications.</desc>
+        <icon>zend</icon>
+        <pattern type="header" regex="1">x-powered-by: .*zendserver/?([\d\.]*)\s</pattern>
+    </server>
+    <server>
+        <name>Lotus Domino</name>
+        <desc>An IBM server product that provides enterprise-grade e-mail, collaboration capabilities, and a custom application platform.</desc>
+        <icon>lotus-domino</icon>
+        <pattern type="header">server: lotus-domino</pattern>
+    </server>
+    <server>
+        <name>AOLserver</name>
+        <desc>AOLserver is America Online's open source web server.</desc>
+        <icon>aol</icon>
+        <pattern type="header" regex="1">server: aolserver/(.*?)\s</pattern>
+    </server>
+    <server>
+        <name>Phusion Passenger</name>
+        <desc>a.k.a. mod_rails or mod_rack - makes deployment of Ruby web applications, such as Ruby on Rails, a breeze.</desc>
+        <icon>server</icon>
+        <pattern type="header" regex="1">server: .*phusion passenger ([\d\.]*)</pattern>
+        <pattern type="header" regex="1">x-powered-by: phusion passenger .* ([\d\.]*)</pattern>
+    </server>
+    <server>
+        <name>Git</name>
+        <desc/>
+        <icon>server</icon>
+        <pattern type="header">x-gitsha</pattern>
+    </server>
+    <server>
+        <name>CloudFlare</name>
+        <desc>Offers free and commercial, cloud-based services to help secure and accelerate websites.</desc>
+        <icon>cloudflare</icon>
+        <pattern type="header">set-cookie: __cfduid</pattern>
+        <pattern type="header">server: cloudflare</pattern>
+    </server>
+    <server>
+        <name>ColdFusion</name>
+        <desc>The Adobe ColdFusion application server enables the rapid development, deployment, and maintainance of rich and robust Internet applications.</desc>
+        <pattern type="header">CFGLOBALS</pattern>
+        <pattern type="header">CFID</pattern>
+        <pattern type="header">CFTOKEN</pattern>
+    </server>
+</servers>

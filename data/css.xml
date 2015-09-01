@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<csss>
+    <css>
+        <name>Bootstrap</name>
+        <desc>Get the lowdown on the key pieces of Bootstrap's infrastructure, including our approach to better, faster, stronger web development.</desc>
+        <icon>bootstrap</icon>
+        <pattern regex="1">bootstrap.([\d\.]*)\.min\.css</pattern>
+    </css>
+</csss>

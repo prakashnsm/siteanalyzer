@@ -1,0 +1,8 @@
+web1:
+  name: siteanalyzer
+  document_root: /public
+  shared_writable_dirs:
+    - /cache
+    - /logs
+  php_extensions:
+    - curl

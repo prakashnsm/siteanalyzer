@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<cdns>
+    <doc>
+        <name>Shockwave/Flash</name>
+        <desc>A cross-platform, browser-based application runtime that provides uncompromised viewing of expressive application.</desc>
+        <icon>adobe</icon>
+        <pattern type="link">application/x-shockwave-flash</pattern>
+        <pattern type="inline">ShockwaveFlash.ShockwaveFlash</pattern>
+    </doc>
+    <doc>
+        <name>YouTube</name>
+        <desc>Share your videos with friends, family, and the world.</desc>
+        <icon>youtube</icon>
+        <pattern>youtube.com/v/</pattern>
+    </doc>
+    <doc>
+        <name>Brightcove</name>
+        <desc>Brightcove Video Cloud is the leading online video hosting platform and online  video player solution.</desc>
+        <icon>brightcove</icon>
+        <pattern>admin.brightcove.com/js</pattern>
+    </doc>
+    <doc>
+        <name>Vimeo</name>
+        <desc>Vimeo is a respectful community of creative people who are passionate about sharing the videos they make.</desc>
+        <icon>vimeo</icon>
+        <pattern>vimeo.com/video</pattern>
+    </doc>
+</cdns>

@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<ads>
+    <ad>
+        <name>BidVertiser</name>
+        <desc>Pay per click advertising - online advertising directly on sites of your choice.'</desc>
+        <icon>ad</icon>
+        <pattern>bidvertiser.com/</pattern>
+    </ad>
+    <ad>
+        <name>Smowtion</name>
+        <desc>Smowtion connects audiences and ads in relevant scenarios.</desc>
+        <icon>ad</icon>
+        <pattern>smowtion.com/</pattern>
+    </ad>
+    <ad>
+        <name>Gunggo</name>
+        <desc>Gunggo is an online advertising network</desc>
+        <icon>gunggo</icon>
+        <pattern>gunggo.com/</pattern>
+    </ad>
+    <ad>
+        <name>Pixfuture Media</name>
+        <desc>Ad Solutions for Publishers Advertisers and Ad Networks</desc>
+        <icon>pixfuture</icon>
+        <pattern>pixfuture.com/</pattern>
+    </ad>
+    <ad>
+        <name>Sonobi</name>
+        <desc>A digital display advertising company bringing web publishers and advertisers together.</desc>
+        <icon>sonobi</icon>
+        <pattern>sonobi.com/</pattern>
+    </ad>
+    <ad>
+        <name>AdF.ly</name>
+        <desc>A URL shortener service that pays.</desc>
+        <icon>ad</icon>
+        <pattern>adf.ly/</pattern>
+    </ad>
+    <ad>
+        <name>DoubleClick</name>
+        <desc>The ad management and ad serving technology foundation for the world's buyers, creators and sellers of digital media.</desc>
+        <icon>ad</icon>
+        <pattern regex="1">doubleclick.(net|com)()/</pattern>
+    </ad>
+    <ad>
+        <name>Google AdSense</name>
+        <desc>Google AdSense is an easy way to earn money from your online content.</desc>
+        <icon>google</icon>
+        <pattern>googlesyndication.com/</pattern>
+        <pattern>googleadservices.com/</pattern>
+        <pattern>google_ad</pattern>
+    </ad>
+    <ad>
+        <name>Google AdSense For Search</name>
+        <desc>Combine Google search with AdSense to monetize more web pages.</desc>
+        <icon>google</icon>
+        <pattern regex="1">google.com/.*form=cse-search-box</pattern>
+    </ad>
+    <ad>
+        <name>Google Ad Partner Services</name>
+        <desc>Dedicated account management through AdSense premier level service.</desc>
+        <icon>google</icon>
+        <pattern>partner.googleadservices.com/</pattern>
+    </ad>
+    <ad>
+        <name>AdMeld</name>
+        <desc>Admeld provides the world's top online publishers with technology, expertise, and support to sell their ad inventory smarter.</desc>
+        <icon>ad</icon>
+        <pattern>admeld.com/</pattern>
+    </ad>
+    <ad>
+        <name>BlueKai</name>
+        <desc>BlueKai is an online data exchange designed with consumer transparency and control in mind.</desc>
+        <icon>ad</icon>
+        <pattern>tags.bluekai.com/</pattern>
+    </ad>
+    <ad>
+        <name>Legolas Media</name>
+        <desc>Legolas Media is the next generation audience marketplace.</desc>
+        <icon>ad</icon>
+        <pattern>rt.legolas-media.com/</pattern>
+    </ad>
+    <ad>
+        <name>Criterio</name>
+        <desc/>
+        <icon>ad</icon>
+        <pattern>criterio.</pattern>
+    </ad>
+    <ad>
+        <name>Yield Manager</name>
+        <desc>Yield Manager is an open ad management platform where campaigns bid for ad space based upon website vistors' predicted responses.</desc>
+        <icon>ad</icon>
+        <pattern>yieldmanager.com/</pattern>
+    </ad>
+    <ad>
+        <name>BuySell Ads</name>
+        <desc>One of the largest advertising marketplaces on the Web, serving well over 6 billion ad impressions each month.</desc>
+        <icon>buysellads</icon>
+        <pattern>buysellads.com/</pattern>
+    </ad>
+    <ad>
+        <name>Linkbucks</name>
+        <desc>The leader in social marketing; Make money for sharing your links.</desc>
+        <pattern>linkbucks.com</pattern>
+        <pattern>linkbucksmedia.com/</pattern>
+    </ad>
+    <ad>
+        <name>CPX Interactive</name>
+        <desc>A progressive online ad network and global marketing company.</desc>
+        <icon>cpxinteractive</icon>
+        <pattern>cpxinteractive.com/</pattern>
+    </ad>
+    <ad>
+        <name>Openads/OpenX</name>
+        <desc>Ad technology platform available as a hosted service or as an open source download.</desc>
+        <icon>ad</icon>
+        <pattern>sitegraffiti.com/</pattern>
+    </ad>
+    <ad>
+        <name>Po.st</name>
+        <desc>Social sharing buttons that generate revenue.</desc>
+        <icon>ad</icon>
+        <pattern>po.st/share</pattern>
+    </ad>
+    <ad>
+        <name>HopFeed (ClickBank)</name>
+        <desc>HopFeed is an affiliate-powered advertising platform that serves ads based on keywords and other contextual factors.</desc>
+        <icon>ad</icon>
+        <pattern>hopfeed.com/</pattern>
+    </ad>
+    <ad>
+        <name>GetResponse</name>
+        <desc>Send email newsletters, campaigns, online  surveys and follow-up autoresponders.</desc>
+        <icon>ad</icon>
+        <pattern>getresponse.com/</pattern>
+    </ad>
+    <ad>
+        <name>MSN Search Advertising</name>
+        <desc>Grow Your Business with Search Ads On MSN, Bing &amp; Yahoo.</desc>
+        <icon>ad</icon>
+        <pattern>ads1.msn.com/library</pattern>
+    </ad>
+    <ad>
+        <name>AdRoll</name>
+        <desc>AdRoll is a simple and effective platform for advertising online.</desc>
+        <icon>adroll</icon>
+        <pattern>adroll.com/</pattern>
+    </ad>
+    <ad>
+        <name>AppNexus</name>
+        <desc>AppNexus is the world leader in real-time advertising  technology, serving the most sophisticated companies in the ecosystem.</desc>
+        <icon>appnexus</icon>
+        <pattern>.adnxs.com</pattern>
+    </ad>
+    <ad>
+        <name>AdZerk</name>
+        <desc>Hosted ad server that's easy to use, reliable, and fast.</desc>
+        <icon>ad</icon>
+        <pattern>adzerk.net/</pattern>
+    </ad>
+    <ad>
+        <name>Visual Revenue</name>
+        <desc>eal-time Decision Support Platform for Front Page Editing.</desc>
+        <icon>visualrevenue</icon>
+        <pattern>visualrevenue.com/</pattern>
+    </ad>
+    <ad>
+        <name>Chart Beat</name>
+        <desc>Chartbeat is real-time data for front-line doers.</desc>
+        <icon>chartbeat</icon>
+        <pattern>chartbeat.com/</pattern>
+    </ad>
+    <ad>
+        <name>Skimlinks</name>
+        <desc>Realize a new revenue stream with automated affiliate marketing.</desc>
+        <icon>ad</icon>
+        <pattern>skimresources.com/</pattern>
+    </ad>
+    <ad>
+        <name>Federated Media Publishing</name>
+        <desc>We power the independent web.</desc>
+        <icon>ad</icon>
+        <pattern>fmpub.net/</pattern>
+    </ad>
+    <ad>
+        <name>LinkShare/LinkSynergy</name>
+        <desc>It is a network of merchants &amp; web publishers.</desc>
+        <icon>ad</icon>
+        <pattern>linksynergy.com/</pattern>
+    </ad>
+</ads>

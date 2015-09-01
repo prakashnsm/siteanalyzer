@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<widgets>
+    <widget>
+        <name>Facebook Like Button</name>
+        <desc>The Like button lets a user share your content with friends on Facebook.</desc>
+        <icon>facebook</icon>
+        <pattern>facebook.com/plugins/like</pattern>
+        <pattern type="all">&lt;fb:like</pattern>
+    </widget>
+    <widget>
+        <name>Facebook Activity Feed</name>
+        <desc>The Activity Feed plugin displays the most interesting recent activity taking place  on your site.</desc>
+        <icon>facebook</icon>
+        <pattern type="all">&lt;fb:activity</pattern>
+    </widget>
+    <widget>
+        <name>Facebook Login</name>
+        <desc>Facebook is a social utility that connects people with friends and others who work , study and live around them.</desc>
+        <icon>facebook</icon>
+        <pattern type="all">&lt;fb:login</pattern>
+    </widget>
+    <widget>
+        <name>Facebook Like Box</name>
+        <desc>The Like button lets a user share your content with friends on Facebook.</desc>
+        <icon>facebook</icon>
+        <pattern>facebook.com/plugins/likebox</pattern>
+    </widget>
+    <widget>
+        <name>Facebook Sharer</name>
+        <desc>The Share button has been deprecated in favor of the Like button.</desc>
+        <icon>facebook</icon>
+        <pattern>facebook.com/sharer</pattern>
+    </widget>
+    <widget>
+        <name>Facebook Facepile</name>
+        <desc>The Facepile plugin displays the Facebook profile pictures of users who have connected a page.</desc>
+        <icon>facebook</icon>
+        <pattern>facebook.com/plugins/facepile</pattern>
+    </widget>
+    <widget>
+        <name>Twitter</name>
+        <desc>Instantly connect to what's most important to you.</desc>
+        <icon>twitter</icon>
+        <pattern>twitter.com/?status</pattern>
+    </widget>
+    <widget>
+        <name>Twitter Tweet Button</name>
+        <desc>Instantly connect to what's most important to you.</desc>
+        <icon>twitter</icon>
+        <pattern>twitter.com/share</pattern>
+    </widget>
+    <widget>
+        <name>Google +1 Button</name>
+        <desc>Recommend on Search, Share on Google+.</desc>
+        <icon>plus1</icon>
+        <pattern>plusone.js</pattern>
+        <pattern type="inline">plusone.js</pattern>
+        <pattern type="all">g:plusone:</pattern>
+    </widget>
+    <widget>
+        <name>Google+ Platform</name>
+        <desc>Google+ aims to make sharing on the web more like sharing in real life.</desc>
+        <icon>google</icon>
+        <pattern>plus.google.com</pattern>
+        <pattern type="link">plus.google.com</pattern>
+    </widget>
+    <widget>
+        <name>Google Bookmarks</name>
+        <desc>Access your Google bookmarks from any computer With Google Bookmarks.</desc>
+        <icon>google</icon>
+        <pattern>google.com/bookmark</pattern>
+    </widget>
+    <widget>
+        <name>Google Custom Search</name>
+        <desc>Harness the power of Google to create a customized search experience for your own website.</desc>
+        <icon>google2</icon>
+        <pattern regex="1">google.com/(custom|cse)()</pattern>
+    </widget>
+    <widget>
+        <name>Google Site Map</name>
+        <desc>Sitemaps are a way to tell Google about pages on your site that it might not otherwise discover.</desc>
+        <icon>google</icon>
+        <pattern type="meta">verify-v1</pattern>
+    </widget>
+    <widget>
+        <name>Google Maps</name>
+        <desc>Find local businesses, view maps and get driving directions in Google Maps.</desc>
+        <icon>google2</icon>
+        <pattern>maps.google.com/</pattern>
+    </widget>
+    <widget>
+        <name>Pinterest</name>
+        <desc>A content sharing service that allows members to "pin" images, videos and other objects to their pinboard.</desc>
+        <icon>pinterest</icon>
+        <pattern>pinterest.</pattern>
+    </widget>
+    <widget>
+        <name>TypeKit</name>
+        <desc>Add and use web fonts the way you want to.</desc>
+        <icon>typekit</icon>
+        <pattern>typekit.</pattern>
+    </widget>
+    <widget>
+        <name>Bing Webmaster Tools</name>
+        <desc>Drive more visitors to your site using Bing data on search queries, crawling and search traffic.</desc>
+        <icon>bing</icon>
+        <pattern type="meta">msvalidate.01</pattern>
+    </widget>
+    <widget>
+        <name>Yahoo! Site Explorer</name>
+        <desc>Yahoo! service which allowed viewing of information on websites in Yahoo!'s search index.</desc>
+        <icon>yahoo</icon>
+        <pattern type="meta">name="y_key"</pattern>
+    </widget>
+    <widget>
+        <name>ShareThis</name>
+        <desc>Put sharing to work with innovative sharing tools.</desc>
+        <icon>sharethis</icon>
+        <pattern>sharethis.com/button</pattern>
+        <pattern type="header">__unam</pattern>
+    </widget>
+    <widget>
+        <name>Delicious</name>
+        <desc>Keep, share, and discover the best of the Web using Delicious, the world's leading social bookmarking service.</desc>
+        <icon>delicious</icon>
+        <pattern>del.icio.us/post</pattern>
+    </widget>
+    <widget>
+        <name>Digg</name>
+        <desc>The best news, videos and pictures on the web as voted on by the Digg community..</desc>
+        <icon>digg</icon>
+        <pattern>digg.com/submit</pattern>
+    </widget>
+    <widget>
+        <name>Reddit</name>
+        <desc>User-generated news links. Votes promote stories to the front page.</desc>
+        <icon>reddit</icon>
+        <pattern>reddit.com/submit</pattern>
+    </widget>
+    <widget>
+        <name>StumbleUpon</name>
+        <desc>The easiest way to discover new and interesting web pages, photos and videos across the Web.</desc>
+        <icon>stumbleupon</icon>
+        <pattern>stumbleupon.com/submit</pattern>
+    </widget>
+    <widget>
+        <name>Technorati</name>
+        <desc>Real-time search for user-generated media (including weblogs) by tag or keyword.</desc>
+        <icon>technorati</icon>
+        <pattern>technorati.com/faves</pattern>
+    </widget>
+    <widget>
+        <name>AddThis</name>
+        <desc>AddThis is the world's largest sharing platform, helping site owners and brands build digital audiences.</desc>
+        <icon>addthis</icon>
+        <pattern>addthis.com/bookmark</pattern>
+        <pattern>addthis.com/js</pattern>
+    </widget>
+    <widget>
+        <name>LinkedIn</name>
+        <desc>Manage your professional identity. Build and engage with your professional network.</desc>
+        <icon>linkedin</icon>
+        <pattern>linkedin.com/shareArticle</pattern>
+    </widget>
+    <widget>
+        <name>LiveFyre</name>
+        <desc>Livefyre is the a real-time conversation platform on the web.</desc>
+        <icon>livefyre</icon>
+        <pattern>zor.livefyre.com</pattern>
+        <pattern>zor.fyre.co</pattern>
+        <pattern>/livefyre_embed.js</pattern>
+    </widget>
+    <widget>
+        <name>MaxMind</name>
+        <desc>MaxMind provides IP intelligence through the GeoIP brand.</desc>
+        <icon>maxmind</icon>
+        <pattern>maxmind.com/app</pattern>
+    </widget>
+    <widget>
+        <name>Google PageRank Checker</name>
+        <desc>Page Rank Checker is a completely Free tool to check Google PR, page rank of your web site easily.</desc>
+        <icon>pagerank</icon>
+        <pattern>pr.prchecker.info</pattern>
+    </widget>
+    <widget>
+        <name>Lightbox 2</name>
+        <desc>Lightbox is a simple, unobtrusive script used to overlay images on top of the current page.</desc>
+        <icon>lightbox</icon>
+        <pattern>/lightbox\.js\?ver=([\d\.]*)</pattern>
+        <pattern>/lightbox.js</pattern>
+    </widget>
+    <widget>
+        <name>Alexa Site Stats</name>
+        <desc>Alexa is the leading provider of free, global web metrics.</desc>
+        <icon>alexa</icon>
+        <pattern>alexa.com/site_stats</pattern>
+    </widget>
+    <widget>
+        <name>W3 Total Cache</name>
+        <desc>Optimizing WordPress for high traffic and user experience.</desc>
+        <icon>w3tc</icon>
+        <pattern type="comment">w3-edge.com/wordpress-plugins</pattern>
+    </widget>
+    <widget>
+        <name>WP Super Cache</name>
+        <desc>A very fast caching engine for WordPress that produces static html files.</desc>
+        <icon>wordpress</icon>
+        <pattern type="comment">by WP-Super-Cache</pattern>
+    </widget>
+    <widget>
+        <name>Alexa Verify</name>
+        <desc>Alexa is website ranking service website which will give you the ranking of website.</desc>
+        <icon>alexa</icon>
+        <pattern type="meta">alexaverifyid</pattern>
+    </widget>
+    <widget>
+        <name>MailChimp</name>
+        <desc>MailChimp helps you design email newsletters, share them on social networks, integrate with services you already use, and track your results.</desc>
+        <icon>mailchimp</icon>
+        <pattern regex="1">list-manage\d\.com</pattern>
+    </widget>
+    <widget>
+        <name>Gravatar</name>
+        <desc>A Globally Recognized Avatar.</desc>
+        <icon>gravatar</icon>
+        <pattern>gravatar.com/avatar/</pattern>
+    </widget>
+    <widget>
+        <name>Gravatar Profiles</name>
+        <desc>Public Profiles For Everyone.</desc>
+        <icon>gravatar_profiles</icon>
+        <pattern>gravatar.com/js/gprofiles.js</pattern>
+    </widget>
+    <widget>
+        <name>IE Pinning</name>
+        <desc>With Pinned Sites, you can get to your favorite sites directly from the Windows 7 taskbar.</desc>
+        <icon>windows</icon>
+        <pattern type="meta">name="msapplication-</pattern>
+    </widget>
+    <widget>
+        <name>Janrain</name>
+        <desc>User management platform for the social web.</desc>
+        <icon>janrain</icon>
+        <pattern type="inline">window.janrain</pattern>
+        <pattern type="inline">janrain.settings</pattern>
+    </widget>
+    <widget>
+        <name>Yahoo! Geo Technologies</name>
+        <desc>Portfolio of platforms to help you geo-enrich your applications and make the Internet more location-aware.</desc>
+        <icon>yahoo</icon>
+        <pattern>/geo.yahoo.com/</pattern>
+    </widget>
+    <widget>
+        <name>Parse.ly</name>
+        <desc>Parse.ly delivers fresh insights to the web's best publisher.</desc>
+        <icon>parse.ly</icon>
+        <pattern type="inline">static.parsely.com/</pattern>
+        <pattern>static.parsely.com/</pattern>
+    </widget>
+    <widget>
+        <name>Yoast</name>
+        <desc>WordPress SEO is the most complete WordPress SEO plugin that exists today.</desc>
+        <icon>yoast</icon>
+        <pattern type="comment">yoast.com/wordpress</pattern>
+    </widget>
+    <widget>
+        <name>reCAPTCHA</name>
+        <desc>reCAPTCHA is a free CAPTCHA service that helps to digitize books, newspapers and old time radio shows.</desc>
+        <icon>recaptcha</icon>
+        <pattern>/recaptcha_ajax.js</pattern>
+        <pattern>javascript:Recaptcha.</pattern>
+        <pattern>/recaptcha/</pattern>
+    </widget>
+    <widget>
+        <name>UserVoice</name>
+        <desc>UserVoice creates simple feedback, knowledge base and help desk software.</desc>
+        <icon>widget</icon>
+        <pattern>uservoice.com/</pattern>
+    </widget>
+    <widget>
+        <name>FontDeck</name>
+        <desc>Fine Typography For Websites &amp; Web Apps Easy to use, standards-based, thousands of fonts.</desc>
+        <icon>widget</icon>
+        <pattern>fontdeck.com/</pattern>
+    </widget>
+    <widget>
+        <name>ZenDesk</name>
+        <desc>Web-based customer support software used by thousands of companies worldwide.</desc>
+        <icon>zendesk</icon>
+        <pattern>zendesk.com/</pattern>
+    </widget>
+    <widget>
+        <name>Flickr</name>
+        <desc>Flickr is almost certainly the best online photo management and sharing application in the world.</desc>
+        <icon>flickr</icon>
+        <pattern>flickr.com/services</pattern>
+    </widget>
+    <widget>
+        <name>TweetMeme</name>
+        <desc>TweetMeme finds the hottest stories from twitter for you to retweet.</desc>
+        <icon>widget</icon>
+        <pattern>tweetmeme.com/</pattern>
+    </widget>
+</widgets>

@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<jss>
+    <js>
+        <name>jQuery</name>
+        <desc>The Write Less, Do More, JavaScript Library</desc>
+        <icon>jquery</icon>
+        <pattern regex="1">/jquery/([\d\.]*)/</pattern>
+        <pattern regex="1">/jquery\.js\?ver=([\d\.]*)</pattern>
+        <pattern regex="1">jquery-([\d\.]*)\.min\.js</pattern>
+        <pattern regex="1">jquery-([\d\.]*)\.js</pattern>
+        <pattern>/jquery.</pattern>
+    </js>
+    <js>
+        <name>jQuery UI</name>
+        <desc>jQuery UI is the official jQuery user interface library.</desc>
+        <icon>jquery_ui</icon>
+        <pattern regex="1">jqueryui/([\d\.]*)/</pattern>
+        <pattern regex="1">jquery-ui-([\d\.]*)</pattern>
+        <pattern>/jquery.ui.</pattern>
+    </js>
+    <js>
+        <name>jQuery UI Tabs</name>
+        <desc>Support tabs in JQuery UI.</desc>
+        <icon>jquery_ui</icon>
+        <pattern>/jquery.ui.tabs.</pattern>
+    </js>
+    <js>
+        <name>jQuery Tmpl</name>
+        <desc>A plugin for jQuery</desc>
+        <icon>jquery_plugins</icon>
+        <pattern>/jquery.tmpl</pattern>
+    </js>
+    <js>
+        <name>jCarousel</name>
+        <desc>A plugin for jQuery</desc>
+        <icon>jquery_plugins</icon>
+        <pattern>/jquery.jcarousel</pattern>
+    </js>
+    <js>
+        <name>jQuery Form</name>
+        <desc>A plugin for jQuery</desc>
+        <icon>jquery_plugins</icon>
+        <pattern>/jquery.form</pattern>
+    </js>
+    <js>
+        <name>jQuery Cookie</name>
+        <desc>A plugin for jQuery</desc>
+        <icon>jquery_plugins</icon>
+        <pattern>/jquery.cookie</pattern>
+    </js>
+    <js>
+        <name>jQuery Checkbox</name>
+        <desc>A plugin for jQuery</desc>
+        <icon>jquery_plugins</icon>
+        <pattern>/jquery.checkbox</pattern>
+    </js>
+    <js>
+        <name>jQuery OpenID</name>
+        <desc>A plugin for jQuery</desc>
+        <icon>jquery_plugins</icon>
+        <pattern>/jquery.openid</pattern>
+    </js>
+    <js>
+        <name>jQuery Uploadify</name>
+        <desc>A plugin for jQuery</desc>
+        <icon>jquery_plugins</icon>
+        <pattern>/jquery.uploadify</pattern>
+    </js>
+    <js>
+        <name>FancyBox</name>
+        <desc>FancyBox is a tool for displaying images, html content and multi-media in a Mac- style "lightbox" that floats overtop of web page.</desc>
+        <icon>jquery_plugins</icon>
+        <pattern regex="1">[\./]fancybox-([\d\.]*)\.</pattern>
+        <pattern regex="1">[\./]fancybox[\./]</pattern>
+    </js>
+    <js>
+        <name>jQuery Easing</name>
+        <desc>A jQuery plugin from GSGD to give advanced easing options.</desc>
+        <icon>jquery.easing</icon>
+        <pattern regex="1">[\./]jquery.easing-([\d\.]*)\.</pattern>
+        <pattern>jquery.easing</pattern>
+    </js>
+    <js>
+        <name>Facebook for Websites</name>
+        <desc>Facebook Platform enables you to make your website more social.</desc>
+        <icon>facebook</icon>
+        <pattern>connect.facebook</pattern>
+    </js>
+    <js>
+        <name>Facebook SDK</name>
+        <desc>A rich set of client-side functionality for accessing Facebook's server-side API calls.</desc>
+        <icon>facebook</icon>
+        <pattern>facebook-jssdk</pattern>
+    </js>
+    <js>
+        <name>HTML5 Shiv</name>
+        <desc> JavaScript workaround to enable HTML5 elements in versions of Internet Explorer before version 9.</desc>
+        <icon>ie</icon>
+        <pattern type="comment" regex="1">/html5.*\.js</pattern>
+    </js>
+    <js>
+        <name>Twitter Platform</name>
+        <desc>Twitter is an open, real-time introduction and information service.</desc>
+        <icon>twitter</icon>
+        <pattern>platform.twitter.com/</pattern>
+    </js>
+    <js>
+        <name>Mint</name>
+        <desc>An extensible, self-hosted web site analytics program.</desc>
+        <icon>script</icon>
+        <pattern>/mint/?js</pattern>
+    </js>
+    <js>
+        <name>PNG Fix</name>
+        <desc>The fix allows IE to properly render PNG alpha transparency.</desc>
+        <icon>script</icon>
+        <pattern>pngfix.</pattern>
+    </js>
+    <js>
+        <name>MooTools</name>
+        <desc>mootools, a super lightweight web2.0 javascript framework..</desc>
+        <icon>mootools</icon>
+        <pattern regex="1">/mootools[-\.]</pattern>
+        <pattern regex="1">/mootools/([\d\.]*)</pattern>
+    </js>
+    <js>
+        <name>SyntaxHighlighter</name>
+        <desc>A fully functional self-contained code syntax highlighter developed in JavaScript.</desc>
+        <icon>script</icon>
+        <pattern>/shcore.js</pattern>
+    </js>
+    <js>
+        <name>Lazy Load</name>
+        <desc>A jQuery plugin that delays loading of images in long web pages.</desc>
+        <icon>jquery_plugins</icon>
+        <pattern>/lazyload.js</pattern>
+    </js>
+    <js>
+        <name>script.aculo.us</name>
+        <desc>A collection of Web 2.0 style JavaScript libraries that help web developers to easily add visual and ajax effects to projects.</desc>
+        <icon>script.aculo.us</icon>
+        <pattern regex="1">/scriptaculous\.js\?ver=([\d\.]*)</pattern>
+        <pattern regex="1">/scriptaculous/([\d\.]*)</pattern>
+        <pattern>/scriptaculous.js</pattern>
+    </js>
+    <js>
+        <name>Prototype</name>
+        <desc>Provides class-style Object Oriented and AJAX, freely distributable under the terms of an MIT-style license.</desc>
+        <icon>prototype</icon>
+        <pattern regex="1">/prototype\.js\?ver=([\d\.]*)</pattern>
+        <pattern regex="1">/prototype/([\d\.]*)</pattern>
+        <pattern>/prototype.js</pattern>
+    </js>
+    <js>
+        <name>cufon</name>
+        <desc>cufon - fonts for the people</desc>
+        <icon>cufon</icon>
+        <pattern>/cufon-</pattern>
+        <pattern type="inline">cufon.</pattern>
+    </js>
+    <js>
+        <name>Nivo Slider</name>
+        <desc>Nivo Slider is the world's most popular jQuery image slider, and it's completely free!</desc>
+        <icon>jquery_plugins</icon>
+        <pattern>jquery.nivo.slider</pattern>
+    </js>
+    <js>
+        <name>Backbone</name>
+        <desc>Backbone.js gives structure to web applications.</desc>
+        <icon>backbone</icon>
+        <pattern regex="1">/backbone(-min)?\.js()</pattern>
+    </js>
+    <js>
+        <name>Underscore</name>
+        <desc>Underscore is a utility-belt library for JavaScript that provides a lot of the functional programming support.</desc>
+        <icon>underscore</icon>
+        <pattern regex="1">/underscore(-min)?\.js()</pattern>
+    </js>
+    <js>
+        <name>Mustache</name>
+        <desc>Minimal templating in JavaScript.</desc>
+        <icon>mustache</icon>
+        <pattern>/mustache.js</pattern>
+    </js>
+    <js>
+        <name>SWFObject</name>
+        <desc>A javascript-based standards-friendly way of making Flash content accessible to  browsers without Flash installed.</desc>
+        <icon>swfobject</icon>
+        <pattern regex="1">/swfobject/([\d\.]*)</pattern>
+        <pattern>/swfobject.js</pattern>
+    </js>
+    <js>
+        <name>YUI</name>
+        <desc>Yahoo! User Interface Library's lightweight core and modular architecture make it scalable, fast, and robust.</desc>
+        <icon>yui</icon>
+        <pattern regex="1">/yui/([\d\.]*)/?.*\.js</pattern>
+    </js>
+    <js>
+        <name>Dojo Toolki</name>
+        <desc>Dojo Toolkit is an open source modular JavaScript library designed to ease the rapid development.</desc>
+        <icon>dojotoolkit</icon>
+        <pattern regex="1">/dojo/([\d\.]*)</pattern>
+    </js>
+    <js>
+        <name>Google WebFont Loader</name>
+        <desc>The WebFont Loader is a JavaScript library that gives you more control over font loading than the Google Web Fonts API provides.</desc>
+        <icon>google</icon>
+        <pattern regex="1">/webfont/([\d\.]*)</pattern>
+    </js>
+    <js>
+        <name>Google Web Font API</name>
+        <desc>Making the Web Beautiful!</desc>
+        <icon>google</icon>
+        <pattern type="link">fonts.googleapis.com</pattern>
+    </js>
+    <js>
+        <name>Google Chrome Frame</name>
+        <desc>An open source plug-in that seamlessly brings Google Chrome's open web technologies and speedy JavaScript engine to Internet Explorer.</desc>
+        <icon>google2</icon>
+        <pattern type="meta">chrome=1</pattern>
+        <pattern type="header">X-UA-Compatible: chrome=1</pattern>
+        <pattern regex="1">/chrome-frame/([\d\.]*)</pattern>
+    </js>
+    <js>
+        <name>Google API Loader</name>
+        <desc>Google API loader allows you to easily import one or more APIs, and specify additional settings applicable to your needs..</desc>
+        <icon>google</icon>
+        <pattern>google.com/jsapi</pattern>
+    </js>
+    <js>
+        <name>Ext Core</name>
+        <desc>Cross-browser JavaScript framework.</desc>
+        <icon>extjs</icon>
+        <pattern regex="1">/ext-core/([\d\.]*)</pattern>
+    </js>
+    <js>
+        <name>Modernizr</name>
+        <desc>An open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</desc>
+        <icon>script</icon>
+        <pattern regex="1">modernizr[\.-]</pattern>
+    </js>
+    <js>
+        <name>Handlebars</name>
+        <desc>Handlebars provides the power necessary to let you build semantic templates effectively with no frustration.</desc>
+        <icon>script</icon>
+        <pattern type="inline">text/x-handlebars-template</pattern>
+    </js>
+    <js>
+        <name>Prettify</name>
+        <desc>A Javascript module and CSS file that allows syntax highlighting of source code snippets in an html page.</desc>
+        <icon>script</icon>
+        <pattern regex="1">/prettify[-\.]</pattern>
+    </js>
+    <js>
+        <name>Thickbox</name>
+        <desc>ThickBox is a webpage UI dialog widget written in JavaScript on top of the jQuery library.</desc>
+        <icon>script</icon>
+        <pattern regex="1">/thickbox/([\d\.]*)/?.*\.js</pattern>
+    </js>
+    <js>
+        <name>Shadowbox</name>
+        <desc>Shadowbox is a web-based media viewer application that supports all of the  web's most popular media publishing formats.</desc>
+        <icon>script</icon>
+        <pattern>shadowbox.js</pattern>
+    </js>
+    <js>
+        <name>LinkedIn Javascript API</name>
+        <desc>Javascript platform to help make integrating LinkedIn faster and more powerful.</desc>
+        <icon>linkedin</icon>
+        <pattern>platform.linkedin.com/</pattern>
+    </js>
+    <js>
+        <name>RequireJS</name>
+        <desc>RequireJS is a JavaScript file and module loader.</desc>
+        <icon>requirejs</icon>
+        <pattern>require.js</pattern>
+    </js>
+    <js>
+        <name>innerShiv</name>
+        <desc>innerShiv makes HTML5shim work on innerHTML &amp; jQuery</desc>
+        <icon>script</icon>
+        <pattern type="comment">innershiv.js</pattern>
+    </js>
+    <js>
+        <name>Slimbox</name>
+        <desc>Slimbox, the ultimate lightweight Lightbox clone.</desc>
+        <icon>script</icon>
+        <pattern>/slimbox.js</pattern>
+    </js>
+    <js>
+        <name>sIFR</name>
+        <desc>sIFR is the "Healthy alternative to browser text."</desc>
+        <icon>sifr</icon>
+        <pattern>/sifr.js</pattern>
+    </js>
+    <js>
+        <name>Protoculous</name>
+        <desc>Prototype &amp; Scriptaculous lightweight!</desc>
+        <icon>script</icon>
+        <pattern>/protoculous.js</pattern>
+    </js>
+</jss>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<cdns>
+    <cdn>
+        <name>Google Libraries API </name>
+        <desc>The Google Libraries API is a content distribution network for the most popular, open-source JavaScript libraries.</desc>
+        <icon>google</icon>
+        <pattern>googleapis.com</pattern>
+    </cdn>
+    <cdn>
+        <name>CloudFront</name>
+        <desc>Amazon CloudFront is a web service that makes it easy to distribute content with low latency via a global network of edge locations.</desc>
+        <icon>cdn</icon>
+        <pattern>cloudfront.net</pattern>
+    </cdn>
+    <cdn>
+        <name>jQuery CDN</name>
+        <desc>CDN-hosted copies of jQuery.</desc>
+        <icon>cdn</icon>
+        <pattern>/code.jquery.com</pattern>
+        <pattern>/ajax.aspnetcdn.com/ajax/jQuery</pattern>
+    </cdn>
+    <cdn>
+        <name>EdgeCast</name>
+        <desc>Consistently rated one of the best-performing CDNs in the industry.</desc>
+        <icon>edgecast</icon>
+        <pattern>edgecastcdn.net/</pattern>
+    </cdn>
+    <cdn>
+        <name>Akamai</name>
+        <desc>Akamai's industry expertise for Content Delivery, Application Performance, and Streaming Media help companies build a better web business.</desc>
+        <icon>akamai</icon>
+        <pattern>akamai.net/</pattern>
+    </cdn>
+    <cdn>
+        <name>Unknown</name>
+        <desc>A large distributed system of servers deployed in multiple data centers in the Internet.</desc>
+        <icon>cdn</icon>
+        <pattern>/cdn.</pattern>
+        <pattern regex="1">cdn.(com|net)()/</pattern>
+    </cdn>
+    <cdn>
+        <name>Facebook CDN</name>
+        <desc>A large distributed system of servers deployed in multiple data centers in the Internet.</desc>
+        <icon>cdn</icon>
+        <pattern>fbcdn.net/</pattern>
+    </cdn>
+    <cdn>
+        <name>Amazon Web Services</name>
+        <desc>Amazon Web Services (AWS) delivers a set of services that together form a reliable, scalable, and inexpensive computing platform "in the cloud".</desc>
+        <icon>aws</icon>
+        <pattern>amazonaws.com/</pattern>
+    </cdn>
+</cdns>

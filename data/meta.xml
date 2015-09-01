@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<meta>
+    <meta>
+        <name>Abstract</name>
+        <desc>Gives a short summary of the description.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="abstract"</pattern>
+    </meta>
+    <meta>
+        <name>Author</name>
+        <desc>Declare the author of the HTML or XML document.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="author"</pattern>
+    </meta>
+    <meta>
+        <name>Cache Control</name>
+        <desc>Allows Web publishers to define how pages should be handled by caches.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">http-equiv="cache-control"</pattern>
+    </meta>
+    <meta>
+        <name>Content Language</name>
+        <desc>Declares the natural language of the document.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">http-equiv="content-language"</pattern>
+    </meta>
+    <meta>
+        <name>Content Script Type</name>
+        <desc>Used to specify the default scripting language of the document.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">http-equiv="content-script-type" </pattern>
+    </meta>
+    <meta>
+        <name>Content Type</name>
+        <desc>Used to declare the character set of a website.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">http-equiv="content-type"</pattern>
+    </meta>
+    <meta>
+        <name>Content Type Style</name>
+        <desc>The Meta Content Style Type is used to specify the default Cascading Style Sheet (CSS) language for the documents.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">http-equiv="content-style-type"</pattern>
+    </meta>
+    <meta>
+        <name>Copyright</name>
+        <desc>Used to include a copyright, trademark, patent, or other information that pertains to intellectual property.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="copyright"</pattern>
+    </meta>
+    <meta>
+        <name>Description</name>
+        <desc>Gives a brief overview of the document.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="description"</pattern>
+    </meta>
+    <meta>
+        <name>Designer</name>
+        <desc>Used to declare the designer of the website.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="designer"</pattern>
+    </meta>
+    <meta>
+        <name>Distribution</name>
+        <desc>Used to declare the distribution of your web content.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="distribution"</pattern>
+    </meta>
+    <meta>
+        <name>Expires</name>
+        <desc>Used to declare the date and time after which the web document should be considered expired.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">http-equiv="expires"</pattern>
+    </meta>
+    <meta>
+        <name>Generator</name>
+        <desc>Used to declare the name and version number of the publishing tool used to create the page.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="generator"</pattern>
+    </meta>
+    <meta>
+        <name>Keywords</name>
+        <desc>List keywords that define the content of the site.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="keywords"</pattern>
+    </meta>
+    <meta>
+        <name>Language</name>
+        <desc>Used to declare the language used on the website.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="language"</pattern>
+    </meta>
+    <meta>
+        <name>MS Smart Tags</name>
+        <desc>The Meta MS Smart tags were part of a beta test of Internet Explorer.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">mssmarttags</pattern>
+    </meta>
+    <meta>
+        <name>MSN (No ODP)</name>
+        <desc>Used for your description in the Bing search results instead of the description used in DMOZ.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="msnbot"</pattern>
+    </meta>
+    <meta>
+        <name>Yahoo! (No ODP)</name>
+        <desc>Opt-Out for Yahoo Directory titles &amp; descriptions</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="slurp"</pattern>
+    </meta>
+    <meta>
+        <name>Pragma No Cache</name>
+        <desc>Used to prevent visitors from seeing a cached version of a specific page.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">http-equiv="pragma"</pattern>
+    </meta>
+    <meta>
+        <name>Publisher</name>
+        <desc>Used to declare the name and version number of the publishing tool used to create the page.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="publisher"</pattern>
+    </meta>
+    <meta>
+        <name>Refresh</name>
+        <desc>Used to specify a delay in seconds before the browser automatically reloads the document or URL specified.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">http-equiv="refresh"</pattern>
+    </meta>
+    <meta>
+        <name>Reply To</name>
+        <desc>Used to harvest email addresses. The Meta Reply To tag is a Spammers tag. </desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="reply-to"</pattern>
+    </meta>
+    <meta>
+        <name>Resource Type</name>
+        <desc>Used to declare the resource of a page.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="resource-type" </pattern>
+    </meta>
+    <meta>
+        <name>Revisit After</name>
+        <desc>Used to inform search engines when to return to index your site.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="revisit-after"</pattern>
+    </meta>
+    <meta>
+        <name>Robots</name>
+        <desc>Controls search engine robots on a per-page basis. It tells Robots they may traverse the page, but not index it.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="robots"</pattern>
+    </meta>
+    <meta>
+        <name>Set Cookie</name>
+        <desc>Used to set a cookie in the user's web browser.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">http-equiv="set-cookie"</pattern>
+    </meta>
+    <meta>
+        <name>Subject</name>
+        <desc>Used to declare the subject of the web site.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="subject"</pattern>
+    </meta>
+    <meta>
+        <name>Title</name>
+        <desc>Declare the title of the page.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="title"</pattern>
+    </meta>
+    <meta>
+        <name>X-UA-Compatible</name>
+        <desc>This meta tag allows web authors to choose what version of Internet Explorer the page should be rendered.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">x-ua-compatible</pattern>
+    </meta>
+    <meta>
+        <name>Viewport</name>
+        <desc>Changes the logical window size used when displaying a page.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="viewport"</pattern>
+    </meta>
+    <meta>
+        <name>Image Toolbar</name>
+        <desc>Facilitate how to handle images and photos when you use Internet Exlorer.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">http-equiv="imagetoolbar"</pattern>
+    </meta>
+    <meta>
+        <name>DNS Prefetch</name>
+        <desc>DNS Prefetching is a method of informing the browser of domain names referenced on a site so that the client can resolve the DNS for those hosts.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">x-dns-prefetch-control</pattern>
+        <pattern type="meta">rel="dns-prefetch"</pattern>
+    </meta>
+    <meta>
+        <name>Googlebot</name>
+        <desc>Google tag are exclusive for use with Google.</desc>
+        <icon>tick</icon>
+        <pattern type="meta">name="googlebot"</pattern>
+    </meta>
+</meta>
