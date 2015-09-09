@@ -42,7 +42,7 @@ a {
 }
 
 .subtitle, .email {
-    color: #aaa;
+    color: #aaa!important;
 }
 
 .error {
