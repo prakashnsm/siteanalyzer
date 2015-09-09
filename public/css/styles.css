@@ -11,6 +11,15 @@ li {
     list-style-type: none;
 }
 
+a {
+    color: #C00!important;
+}
+
+.btn-custom-color {
+    background-color: #C00000!important;
+    background-image: -webkit-linear-gradient(top, #C00, #C02);
+}
+
 .name, .ver {
     color: #2929FE;
     font-weight: bold;
