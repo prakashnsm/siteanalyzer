@@ -116,7 +116,7 @@ function get_random_url()
 // Not used.
 function get_random_url_db()
 {
-    $mysqli = new mysqli("localhost", "root", "beer", "sitealyzer_topsites");
+    $mysqli = new mysqli("localhost", "site_analyzer_user_1", "site_analyzer_user_pass", "site_analyzer_top_sites");
     if ($mysqli->connect_errno) {
         throw new Exception("Connect failed: %s\n" . $mysqli->connect_error);
     }
