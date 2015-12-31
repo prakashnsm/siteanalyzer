@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>SiteAnalyzer: The Website Analyzer</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+<body>
+<div class='container'>
+    <div class='row'>
+        <div class='span8 offset2'>
+
+            <div class='header'>
+                <a href='/'><img src='images/logo-new.png'></a>
+
+                <h1 style=" position: relative; width: 450px; height: 45px;padding-top: 0px;">
+                    <span class='title' style="display: block;">SiteAnalyzer</span>
+            <span class='subtitle' style=" font-size: 9pt; right: 190px; position: absolute; top: 25px;">
+                The Website Analyzer
+            </span>
+                </h1>
+
+                <p class='copy'>Copyright &copy; <?= date('Y') ?>
+                    <a class='email' href='mailto:prakash.nsm@gmail.com?subject=site-analyzer'>prakash.nsm</a>
+                </p>
+            </div>
+
+            <form class="form-inline" action="check" method="get">
+                Website: &nbsp;&nbsp;<input class='span6' type="text" name="url" value="{{ url }}">
+                <input class='btn-primary btn-custom-color' type="submit" value="Analyze">
+            </form>
+
+            {% if message %}
+                <div class='error'>{{ message }}</div>
+            {% endif %}
+
+        </div>
+</div>
+</div>
+</body>
+</html>

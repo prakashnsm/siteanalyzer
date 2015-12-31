@@ -36,6 +36,15 @@ $app->get('/', function () use ($app)
     $app->render('index.twig', $data);
 });
 
+$app->get('/sms', function () use ($app)
+{
+    $data['url']        = 'http://'. get_random_url();
+    $data['check_url']  = "http://{$_SERVER['SERVER_NAME']}/check?url=";
+    $data['show_try']   = true;
+
+    $app->render('sms.twig', $data);
+});
+
 $app->get('/check', function () use ($app)
 {
     $url = trim($app->request()->params('url'));
