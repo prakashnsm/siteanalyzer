@@ -66,6 +66,10 @@ hr {
     color:black;
 }
 
+div.container {
+    width: 100%;
+}
+
 .copy {
     color: #aaa;
     font-family: verdana;
