@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap:http://siteanalyzer-hubapps.rhcloud.com/sitemap.xml.gz
