@@ -1,4 +1,4 @@
-# SiteAnalyzer #
+# SiteAnalyzer [![Build Status](https://travis-ci.org/prakashnsm/siteanalyzer.svg?branch=heroku-deployment-v1.0.1)](https://travis-ci.org/prakashnsm/siteanalyzer)#
 
 SiteAnalyzer uncovers the 'technologies' used on websites. It detects content management systems, web shops, web servers, JavaScript frameworks, analytics tools and many more.
 
