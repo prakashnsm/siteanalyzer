@@ -9,3 +9,7 @@ php:
   - 5.3
   # aliased to a recent 5.4.x version
   - 5.4
+
+branches:
+  only:
+    - heroku-deployment-v1.0.1
