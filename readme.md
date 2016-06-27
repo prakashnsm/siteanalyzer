@@ -4,7 +4,7 @@ SiteAnalyzer uncovers the 'technologies' used on websites. It detects content ma
 
 ### Live Site ###
 
-http://siteanalyzer-hubapps.rhcloud.com/
+http://siteanalyzer.herokuapp.com
 
 ### ToDo ###
 
