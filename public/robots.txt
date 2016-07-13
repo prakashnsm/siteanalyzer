@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap:http://siteanalyzer-hubapps.rhcloud.com/sitemap.xml.gz
+Sitemap:http://siteanalyzer.herokuapp.com/sitemap.xml.gz
