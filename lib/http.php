@@ -18,6 +18,8 @@ class Http
             'Opera/9.20 (Windows NT 6.0; U; en)',        
         );
         
+		$agent = 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.0.3705; .NET CLR 1.1.4322)';
+		
         $this->curlopts = array(
             CURLOPT_CAINFO          => __DIR__ . '/cacert.pem',     // HTTPS
             CURLOPT_HEADER          => true,    
@@ -28,7 +30,7 @@ class Http
             CURLOPT_TIMEOUT         => 12,      // CURL timeout (includes connect timeout)
             CURLOPT_ENCODING        => 'gzip',
             CURLOPT_FAILONERROR     => true,    // Error on 4xx/5xx            
-            CURLOPT_USERAGENT       => array_rand($user_agents),  
+            CURLOPT_USERAGENT       => $agent, //array_rand($user_agents),  
             CURLOPT_SSL_VERIFYPEER  => false
         );
     }
