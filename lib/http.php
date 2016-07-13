@@ -18,7 +18,7 @@ class Http
             'Opera/9.20 (Windows NT 6.0; U; en)',        
         );
         
-		$agent = 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.0.3705; .NET CLR 1.1.4322)';
+		$agent = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36';
 		
         $this->curlopts = array(
             CURLOPT_CAINFO          => __DIR__ . '/cacert.pem',     // HTTPS
