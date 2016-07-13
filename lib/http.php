@@ -29,7 +29,6 @@ class Http
             CURLOPT_ENCODING        => 'gzip',
             CURLOPT_FAILONERROR     => true,    // Error on 4xx/5xx            
             CURLOPT_USERAGENT       => array_rand($user_agents),  
-            CURLOPT_SSL_VERIFYPEER  => false
         );
     }
 
