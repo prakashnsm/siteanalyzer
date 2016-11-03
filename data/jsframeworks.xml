@@ -8,8 +8,13 @@
         <pattern regex="1">/jquery\.js\?ver=([\d\.]*)</pattern>
         <pattern regex="1">jquery-([\d\.]*)\.min\.js</pattern>
         <pattern regex="1">jquery-([\d\.]*)\.js</pattern>-->
-        <pattern>/angularjs.</pattern>
-		<pattern regex="1">data-ng-app</pattern>
-		<pattern regex="1">ng-app</pattern>
+
+		<pattern type="head">data-ng-app</pattern>
+		<pattern type="head">ng-app</pattern>
+		<pattern type="all">ng-app</pattern>
+		<pattern regex="1">/angularjs.</pattern>
+        <pattern regex="1">angular(.*)/</pattern>
+        <pattern regex="1">angular-(.*)</pattern>		
+		<pattern>/angularjs.</pattern>
     </js>
 </jss>
