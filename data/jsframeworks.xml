@@ -9,5 +9,7 @@
         <pattern regex="1">jquery-([\d\.]*)\.min\.js</pattern>
         <pattern regex="1">jquery-([\d\.]*)\.js</pattern>-->
         <pattern>/angularjs.</pattern>
+		<pattern regex="1">data-ng-app</pattern>
+		<pattern regex="1">ng-app</pattern>
     </js>
 </jss>
