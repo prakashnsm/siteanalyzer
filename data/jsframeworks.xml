@@ -6,9 +6,9 @@
         <icon>angularjs</icon>
 		<pattern type="xpath">//*[@ng-app]</pattern>
 		<pattern type="xpath">//*[@data-ng-app]</pattern>
-		<pattern type="head">ng-app</pattern>		
-		<pattern type="head">data-ng-app</pattern>
-		<pattern type="all">ng-app</pattern>		
-		<pattern type="all">data-ng-app</pattern>
+		<pattern type="head">//@ng-app</pattern>		
+		<pattern type="head">//@data-ng-app</pattern>
+		<pattern type="all">//@ng-app</pattern>		
+		<pattern type="all">//@data-ng-app</pattern>
     </js>
 </jss>
