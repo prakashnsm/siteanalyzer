@@ -1,0 +1,6 @@
+{
+  "name": "Site Analyzer",
+  "tagline": "",
+  "body": "# SiteAnalyzer [![Build Status](https://travis-ci.org/prakashnsm/siteanalyzer.svg?branch=master)](https://travis-ci.org/prakashnsm/siteanalyzer)#\r\n\r\nSiteAnalyzer uncovers the 'technologies' used on websites. It detects content management systems, web shops, web servers, JavaScript frameworks, analytics tools and many more.\r\n\r\n### Live Site ###\r\n\r\nhttp://siteanalyzer.herokuapp.com\r\n\r\n### ToDo ###\r\n\r\n- Add/Update scan strings\r\n- Add more techs (ex. css frameworks)\r\n- Add SEO related info (title, meta tags values, etc.)\r\n- Check for sitemap, robots, etc. (just use HEAD)\r\n- Display target sites favicon\r\n- Fast find for \"g:\" or \"fb:\" or any namespaced tag\r\n- Detect servers using server fingerprints.\r\n- Detect language based on url extension (php/aspx/pl/etc..)\r\n- Detect using error page (non customized)\r\n- Use better HTTP library.\r\n- Use NoSQL db to store cached files.\r\n\r\n### Authors and Contributors\r\n\r\n@prakashnsm\r\n\r\n### Support or Contact\r\nHaving trouble with Pages? Check out our [documentation](https://help.github.com/pages) or [contact support](https://github.com/contact) and we’ll help you sort it out.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
