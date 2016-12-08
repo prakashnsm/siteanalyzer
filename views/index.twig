@@ -1,152 +1,162 @@
 <!doctype html>
 <html>
+    <head profile="http://www.w3.org/1999/xhtml/vocab">
 
-<head>
-    <title>SiteAnalyzer: The Website Analyzer</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
-</head>
-<body>
-<div class='container'>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- site-analyzer -->
-    <div class='row'>
-        <div class="span4">
-            <ins class="adsbygoogle"
-                 style="display:inline-block;width:300px;height:600px"
-                 data-ad-client="ca-pub-8286069941624994"
-                 data-ad-slot="7949036060"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-        <div class='span8 offset'>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="dcterms.title" content="SiteAnalyzer">
+        <meta name="dcterms.description" content="Identifies software on the web">
+        <meta name="dcterms.type" content="Text">
+        <meta name="dcterms.format" content="text/html">
+        <meta name="dcterms.identifier" content="http://siteanalyzer.herokuapp.com/">
+        <title>SiteAnalyzer: The Website Analyzer</title>
 
-            <div class='header'>
-                <a href='/'><img src='images/logo-new.png'></a>
+        <link rel="canonical" href="http://siteanalyzer.herokuapp.com/">
+        <link rel="shortlink" href="http://siteanalyzer.herokuapp.com/">
 
-                <h1 style=" position: relative; width: 450px; height: 45px;padding-top: 0px;">
-                    <span class='title' style="display: block;">SiteAnalyzer</span>
-            <span class='subtitle' style=" font-size: 9pt; right: 190px; position: absolute; top: 25px;">
-                The Website Analyzer
-            </span>
-                </h1>
-
-                <p class='copy'>Copyright &copy; <?= date('Y') ?>
-                    <a class='email' href='mailto:prakash.nsm@gmail.com?subject=site-analyzer'>prakash.nsm</a>
-                </p>
-            </div>
-
-            <form class="form-inline" action="check" method="get">
-                Website: &nbsp;&nbsp;<input class='span6' type="text" name="url" value="{{ url }}">
-                <input class='btn-primary btn-custom-color' type="submit" value="Analyze">
-            </form>
-
-            <div class='try'>Ex:
-                <a href="{{ check_url }}http://www.wunderground.com">Weather Underground</a>,
-                <a href="{{ check_url }}http://www.cnet.com">CNET</a>,
-                <a href="{{ check_url }}http://www.mashable.com">Mashable</a>, or a
-                <a href="{{ check_url }}random">Random Top 1000 Site</a>
-            </div>
-
-            {% if message %}
-                <div class='error'>{{ message }}</div>
-            {% endif %}
-
-            {% if not results %}
-                <div class='row blurb'>
-                    {# blurb copied from wapplayer.com :) #}
-                    <h4>What is SiteAnalyzer?</h4>
-
-                    <p>SiteAnalyzer uncovers the technologies used on websites. It detects content management systems,
-                        web shops, web servers, JavaScript frameworks, analytics tools and many more.</p>
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="css/styles.css" type="text/css">
+    </head>
+    <body>
+        <div class='container'>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- site-analyzer -->
+            <div class='row'>
+                <div class="span4">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:600px"
+                         data-ad-client="ca-pub-8286069941624994"
+                         data-ad-slot="7949036060"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
-            {% endif %}
+                <div class='span8 offset'>
 
-            {% if results and not error %}
+                    <div class='header'>
+                        <a href='/'><img src='images/logo-new.png'></a>
 
-                <h3>Analysis of <span class='url'><a href='{{ url }}' target='_blank'>{{ url }}</a></span></h3>
-                {% if not results %}
-                    <h3>Nothing Found.</h3>
-                {% else %}
-                    {% for title, groups in results %}
-                        {% if groups %}
-                            <p class='group'>{{ title }}</p>
-                            <ul>{% for group in groups %}
-                                    <li>
-                                        <img width='16' height='16'
-                                             src='images/icons/{{ group.icon != '' ? group.icon : "page_white_text" }}.ico'>&nbsp;
-                                        <span class='name'>{{ group.name }}</span> <span
-                                                class='ver'>{{ group.ver }}</span>
+                        <h1 style=" position: relative; width: 450px; height: 45px;padding-top: 0px;">
+                            <span class='title' style="display: block;">SiteAnalyzer</span>
+                    <span class='subtitle' style=" font-size: 9pt; right: 190px; position: absolute; top: 25px;">
+                        The Website Analyzer
+                    </span>
+                        </h1>
 
-                                        <p>{{ group.desc }}</p>
-                                    </li>
-                                {% endfor %}</ul>
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
+                        <p class='copy'>Copyright &copy; <?= date('Y') ?>
+                            <a class='email' href='mailto:prakash.nsm@gmail.com?subject=site-analyzer'>prakash.nsm</a>
+                        </p>
+                    </div>
 
-                <hr/>
+                    <form class="form-inline" action="check" method="get">
+                        Website: &nbsp;&nbsp;<input class='span6' type="text" name="url" value="{{ url }}">
+                        <input class='btn-primary btn-custom-color' type="submit" value="Analyze">
+                    </form>
 
-                <ul>
-                    <li>Page analyzed in: <b>{{ analysis_time }} secs.</b></li>
-                    <li>Page downloaded in:
-                        {% if http.total_time >= 0 %}
-                            <b>{{ total_time }} secs.</b>
-                        {% else %}
-                            <span class='na'>FOUND IN CACHE</span>
-                        {% endif %}
-                    </li>
-                    <li>Page download speed:
-                        {% if http.speed_download >= 0 %}
-                            <b>{{ speed_download }}/s</b>
-                        {% else %}
-                            <span class='na'>N/A</span>
-                        {% endif %}
-                    </li>
-                    {% if http.gzip and is_float(http.total_time) %}
-                        <li>Page size (gzip) is: <b>{{ size_download_gzip }} ({{ size_download_gzip2 }} bytes)</b></li>
+                    <div class='try'>Ex:
+                        <a href="{{ check_url }}http://www.wunderground.com">Weather Underground</a>,
+                        <a href="{{ check_url }}http://www.cnet.com">CNET</a>,
+                        <a href="{{ check_url }}http://www.mashable.com">Mashable</a>, or a
+                        <a href="{{ check_url }}random">Random Top 1000 Site</a>
+                    </div>
+
+                    {% if message %}
+                        <div class='error'>{{ message }}</div>
                     {% endif %}
-                    <li>Page size is: <b>{{ size_download }} ({{ size_download2 }} bytes)</b></li>
-                </ul>
 
-                <form class='form2' action="check" method="get">
-                    <input type='hidden' name='refresh' value='1'>
-                    <input type='hidden' name='url' value=' {{ url }}'>
-                    <input class='btn-mini' type="submit" value="Refresh Page">
-                </form>
+                    {% if not results %}
+                        <div class='row blurb'>
+                            {# blurb copied from wapplayer.com :) #}
+                            <h4>What is SiteAnalyzer?</h4>
 
-            {% endif %}
+                            <p>SiteAnalyzer uncovers the technologies used on websites. It detects content management systems,
+                                web shops, web servers, JavaScript frameworks, analytics tools and many more.</p>
+                        </div>
+                    {% endif %}
 
+                    {% if results and not error %}
+
+                        <h3>Analysis of <span class='url'><a href='{{ url }}' target='_blank'>{{ url }}</a></span></h3>
+                        {% if not results %}
+                            <h3>Nothing Found.</h3>
+                        {% else %}
+                            {% for title, groups in results %}
+                                {% if groups %}
+                                    <p class='group'>{{ title }}</p>
+                                    <ul>{% for group in groups %}
+                                            <li>
+                                                <img width='16' height='16'
+                                                     src='images/icons/{{ group.icon != '' ? group.icon : "page_white_text" }}.ico'>&nbsp;
+                                                <span class='name'>{{ group.name }}</span> <span
+                                                        class='ver'>{{ group.ver }}</span>
+
+                                                <p>{{ group.desc }}</p>
+                                            </li>
+                                        {% endfor %}</ul>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+
+                        <hr/>
+
+                        <ul>
+                            <li>Page analyzed in: <b>{{ analysis_time }} secs.</b></li>
+                            <li>Page downloaded in:
+                                {% if http.total_time >= 0 %}
+                                    <b>{{ total_time }} secs.</b>
+                                {% else %}
+                                    <span class='na'>FOUND IN CACHE</span>
+                                {% endif %}
+                            </li>
+                            <li>Page download speed:
+                                {% if http.speed_download >= 0 %}
+                                    <b>{{ speed_download }}/s</b>
+                                {% else %}
+                                    <span class='na'>N/A</span>
+                                {% endif %}
+                            </li>
+                            {% if http.gzip and is_float(http.total_time) %}
+                                <li>Page size (gzip) is: <b>{{ size_download_gzip }} ({{ size_download_gzip2 }} bytes)</b></li>
+                            {% endif %}
+                            <li>Page size is: <b>{{ size_download }} ({{ size_download2 }} bytes)</b></li>
+                        </ul>
+
+                        <form class='form2' action="check" method="get">
+                            <input type='hidden' name='refresh' value='1'>
+                            <input type='hidden' name='url' value=' {{ url }}'>
+                            <input class='btn-mini' type="submit" value="Refresh Page">
+                        </form>
+
+                    {% endif %}
+
+                </div>
+                <div class="span4 offset">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:600px"
+                         data-ad-client="ca-pub-8286069941624994"
+                         data-ad-slot="7949036060"></ins>
+                </div>
+            </div>
+            <!--
+            <div class="row">
+                <script type='text/javascript'>var embedBaseUrl = 'http://uvlog.com/';
+                    var embedChannelId = 8989;
+                    var embedSize = [1, 1];
+                    var embedAutoplay = true;
+                    var embedChat = false;</script>
+                <script type='text/javascript' src='http://uvlog.com/assets/js/embed.js'></script>
+            </div>
+            -->
         </div>
-        <div class="span4 offset">
-            <ins class="adsbygoogle"
-                 style="display:inline-block;width:300px;height:600px"
-                 data-ad-client="ca-pub-8286069941624994"
-                 data-ad-slot="7949036060"></ins>
-        </div>
-</div>
-    <!--
-    <div class="row">
-        <script type='text/javascript'>var embedBaseUrl = 'http://uvlog.com/';
-            var embedChannelId = 8989;
-            var embedSize = [1, 1];
-            var embedAutoplay = true;
-            var embedChat = false;</script>
-        <script type='text/javascript' src='http://uvlog.com/assets/js/embed.js'></script>
-    </div>
-    -->
-</div>
-    
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-34758915-3', 'auto');
-      ga('send', 'pageview');
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    </script>
-</body>
+          ga('create', 'UA-34758915-3', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+    </body>
 </html>
