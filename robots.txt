@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap:http://siteanalyzer.herokuapp.com/sitemap.xml.gz
