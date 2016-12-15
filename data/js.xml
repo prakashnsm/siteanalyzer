@@ -8,6 +8,7 @@
         <pattern regex="1">/jquery\.js\?ver=([\d\.]*)</pattern>
         <pattern regex="1">jquery-([\d\.]*)\.min\.js</pattern>
         <pattern regex="1">jquery-([\d\.]*)\.js</pattern>
+		<pattern regex="1">jquery-v([\d\.]*)\.js</pattern>
         <pattern>/jquery.</pattern>
     </js>
     <js>
