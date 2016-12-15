@@ -84,11 +84,13 @@
                                     <p class='group'>{{ title }}</p>
                                     <ul>{% for group in groups %}
                                             <li>
-                                                <img width='16' height='16'
-                                                     src='images/icons/{{ group.icon != '' ? group.icon : "page_white_text" }}.ico'>&nbsp;
-                                                <span class='name'>{{ group.name }}</span> <span
-                                                        class='ver'>{{ group.ver }}</span>
-
+                                                <img width='16' height='16' src='images/icons/{{ group.icon != '' ? group.icon : "page_white_text" }}.ico'>&nbsp;
+                                                <span class='name'>{{ group.name }}</span> 
+												{% if group.dptype and not error and group.dptype == 1 %}
+													<span class='ver'>&nbsp; [{{ group.ver }}]</span>
+												{% else %}
+													<span class='ver'>{{ group.ver }}</span>
+												{% endif %}
                                                 <p>{{ group.desc }}</p>
                                             </li>
                                         {% endfor %}</ul>
