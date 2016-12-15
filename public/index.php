@@ -75,6 +75,7 @@ $app->get('/check', function () use ($app)
         'Advertising'              => 'ads.xml',
         'Analytics and Tracking'   => 'trackings.xml',
         'CMS'                      => 'cms.xml',
+		'Portals'                  => 'portals.xml',
         'CSS Frameworks'           => 'css.xml',
         'Frameworks'               => 'frameworks.xml',
         'Javascript Libraries'     => 'js.xml',
