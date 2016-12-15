@@ -5,5 +5,6 @@
         <desc>Liferay Portal is a free and open source enterprise portal software product. Distributed under the GNU Lesser General Public License and optional commercial license, Liferay has been declared "Best Open Source Portal" by InfoWorld in 2007.</desc>
         <icon>liferay</icon>      
 		<pattern type="header">Liferay-Portal</pattern>
+		<pattern type="header" regex="1">Liferay-Portal:(.*)</pattern>		
     </portal>
 </portals>
