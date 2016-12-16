@@ -22,7 +22,8 @@
         <name>React</name>
         <desc>React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.\A Declarative views make your code more predictable and easier to debug.</desc>
         <icon>react</icon>
-        <pattern regex="1">/react/([\d\.]*)/</pattern>
+        <pattern type="link" regex="1">/react/([\d\.]*)/</pattern>
+		<pattern regex="1">/react/([\d\.]*)/</pattern>
         <pattern regex="1">/react\.js\?ver=([\d\.]*)</pattern>
         <pattern regex="1">react-([\d\.]*)\.min\.js</pattern>
         <pattern regex="1">react-([\d\.]*)\.js</pattern>
