@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /css/
+Disallow: /images/
+Host: siteanalyzer.herokuapp.com
+Sitemap:http://siteanalyzer.herokuapp.com/sitemap.xml.gz

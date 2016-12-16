@@ -8,7 +8,10 @@
         <pattern regex="1">/jquery\.js\?ver=([\d\.]*)</pattern>
         <pattern regex="1">jquery-([\d\.]*)\.min\.js</pattern>
         <pattern regex="1">jquery-([\d\.]*)\.js</pattern>
+		<pattern regex="1">jquery-v([\d\.]*)\.js</pattern>
+		<pattern regex="1">jquery-v([\d\.]*)\.min\.js</pattern>
         <pattern>/jquery.</pattern>
+		<pattern>/jquery-</pattern>
     </js>
     <js>
         <name>jQuery UI</name>
@@ -165,12 +168,6 @@
         <pattern>jquery.nivo.slider</pattern>
     </js>
     <js>
-        <name>Backbone</name>
-        <desc>Backbone.js gives structure to web applications.</desc>
-        <icon>backbone</icon>
-        <pattern regex="1">/backbone(-min)?\.js()</pattern>
-    </js>
-    <js>
         <name>Underscore</name>
         <desc>Underscore is a utility-belt library for JavaScript that provides a lot of the functional programming support.</desc>
         <icon>underscore</icon>
@@ -298,5 +295,13 @@
         <desc>Prototype &amp; Scriptaculous lightweight!</desc>
         <icon>script</icon>
         <pattern>/protoculous.js</pattern>
+    </js>
+    <js>
+        <name>highlight.js</name>
+        <desc>Syntax highlighting for the Web.</desc>
+        <icon>script</icon>
+		<pattern regex="1">highlight.v([\d\.]*)\.js</pattern>
+		<pattern regex="1">highlight.v([\d\.]*)\.min\.js</pattern>
+        <pattern>/highlight.</pattern>
     </js>
 </jss>
