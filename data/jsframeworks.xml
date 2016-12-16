@@ -10,7 +10,12 @@
 		<pattern type="head">//@data-ng-app</pattern>
 		<pattern type="all">//@ng-app</pattern>		
 		<pattern type="all">//@data-ng-app</pattern>
-        <pattern regex="1">ng-app|data-ng-app</pattern>
-		
+        <pattern regex="1">ng-app|data-ng-app</pattern>		
+    </js>
+	<js>
+        <name>Backbone</name>
+        <desc>Backbone.js gives structure to web applications.</desc>
+        <icon>backbone</icon>
+        <pattern regex="1">/backbone(-min)?\.js()</pattern>
     </js>
 </jss>
