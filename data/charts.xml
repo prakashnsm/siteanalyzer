@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<charts>
+    <chart>
+        <name>Highcharts JS</name>
+        <desc>Highcharts is a charting library written in pure JavaScript, offering an easy way of adding interactive charts to your web site or web application. Designed from ground up with mobile browsers in mind, everything from multitouch zooming to touch-friendly tooltips responds great on mobile platforms. In modern browsers graphs are rendered in SVG, with VML support for legacy browsers (e.g. Internet Explorer 6).</desc>
+        <icon>highcharts</icon>      
+        <pattern regex="1">/highcharts/([\d\.]*)/</pattern>
+        <pattern regex="1">/highcharts\.js\?ver=([\d\.]*)</pattern>
+        <pattern regex="1">highcharts-([\d\.]*)\.min\.js</pattern>
+        <pattern regex="1">highcharts-([\d\.]*)\.js</pattern>
+		<pattern regex="1">highcharts-v([\d\.]*)\.js</pattern>
+		<pattern regex="1">highcharts-v([\d\.]*)\.min\.js</pattern>
+		<pattern>/highcharts.</pattern>
+		<pattern>/highcharts-</pattern>
+    </chart>
+    <chart>
+        <name>Highstock JS</name>
+        <desc>Highstock is a charting solution optimized for financial data visualization and large data sets. It allows web developers to render stock charts, as well as general timeline charts in pure JavaScript, including sophisticated navigation options like a small navigator series, preset date ranges, date picker, scrolling, and panning. Highstock supports line, spline, area, areaspline, column, scatter, OHLC, candlestick, flags, arearange, areasplinerange and columnrange chart types. Any of these can be combined in one chart.</desc>
+        <icon>highcharts</icon>      
+        <pattern regex="1">/highstock/([\d\.]*)/</pattern>
+        <pattern regex="1">/highstock\.js\?ver=([\d\.]*)</pattern>
+        <pattern regex="1">highstock-([\d\.]*)\.min\.js</pattern>
+        <pattern regex="1">highstock-([\d\.]*)\.js</pattern>
+		<pattern regex="1">highstock-v([\d\.]*)\.js</pattern>
+		<pattern regex="1">highstock-v([\d\.]*)\.min\.js</pattern>
+        <pattern>/highstock.</pattern>
+		<pattern>/highstock-</pattern>
+    </chart>
+	<chart>
+        <name>D3.js Charts</name>
+        <desc>D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS. D3’s emphasis on web standards gives you the full capabilities of modern browsers without tying yourself to a proprietary framework, combining powerful visualization components and a data-driven approach to DOM manipulation.</desc>
+        <icon>d3.js</icon>      
+        <pattern regex="1">/d3/([\d\.]*)/</pattern>
+        <pattern regex="1">/d3\.js\?ver=([\d\.]*)</pattern>
+        <pattern regex="1">d3-([\d\.]*)\.min\.js</pattern>
+        <pattern regex="1">d3-([\d\.]*)\.js</pattern>
+		<pattern regex="1">d3.v([\d\.]*)\.js</pattern>
+		<pattern regex="1">d3.v([\d\.]*)\.min\.js</pattern>
+        <pattern>/d3.</pattern>
+    </chart>
+</charts>
