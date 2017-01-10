@@ -34,8 +34,8 @@
                 <input class='btn-primary btn-custom-color' type="submit" value="Send SMS">
             </form>
 
-            {% if message %}
-                <div class='success'>{{ message }}</div>
+            {% if show_success %}
+                <div class='success'> Your message has sent successfully. </div>
             {% endif %}
             
             {% if message %}
