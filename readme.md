@@ -1,4 +1,4 @@
-# SiteAnalyzer [![Build Status](https://travis-ci.org/prakashnsm/siteanalyzer.svg?branch=heroku-deployment-v1.0.1)](https://travis-ci.org/prakashnsm/siteanalyzer) [![CircleCI](https://circleci.com/gh/prakashnsm/siteanalyzer/tree/heroku-deployment-v1.0.1.svg?style=svg)](https://circleci.com/gh/prakashnsm/siteanalyzer/tree/heroku-deployment-v1.0.1)#
+# SiteAnalyzer [![Build Status](https://travis-ci.org/prakashnsm/siteanalyzer.svg?branch=master)](https://travis-ci.org/prakashnsm/siteanalyzer) [![CircleCI](https://circleci.com/gh/prakashnsm/siteanalyzer/tree/master.svg?style=svg)](https://circleci.com/gh/prakashnsm/siteanalyzer/tree/master)#
 
 SiteAnalyzer uncovers the 'technologies' used on websites. It detects content management systems, web shops, web servers, JavaScript frameworks, analytics tools and many more.
 
