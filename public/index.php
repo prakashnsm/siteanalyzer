@@ -10,6 +10,8 @@ require 'vendor/TwigView.php';
 require 'lib/http.php';
 require 'lib/site.php';
 
+require 'lib/way2sms-api.php';
+
 define('DATA_DIR', '../data/');
 define('LOG_DIR',  '../logs/');
 define('CACHE_DIR','../cache/');
@@ -47,21 +49,17 @@ $app->get('/sms', function () use ($app)
 
 $app->get('/sendSMS', function () use ($app)
 {
-    $data['show_success']   = false;
-    
-    require 'lib/way2sms-api.php';
-    $v = false;	
+    $data['show_success']   = false;    
 	if (isset($_REQUEST['user']) && isset($_REQUEST['pwd']) && isset($_REQUEST['mobNo']) && isset($_REQUEST['smsMessage'])) {
 	    $res = sendWay2SMS($_REQUEST['user'], $_REQUEST['pwd'], $_REQUEST['mobNo'], $_REQUEST['smsMessage']);
 	    if (is_array($res))
-		$data['show_success'] =  $res[0]['result'] ? 'true' : 'false';
+		$data['show_success'] =  $res[0]['result'] ? true : false;
 	}
 	
-	if($data['show_success']){
-		$app->render('sms.twig', $data);
-	}else{
+	if(!$data['show_success']){
 		$data['message'] = "Your message didn't send. please try again.";
 	}
+	$app->render('sms.twig', $data);
 });
 
 $app->get('/check', function () use ($app)

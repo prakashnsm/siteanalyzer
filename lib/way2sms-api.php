@@ -1,3 +1,4 @@
+<?php
 /**
  * WAY2SMSClient
  * @author Kingster
@@ -141,3 +142,4 @@ function sendWay2SMS($uid, $pwd, $phone, $msg)
     $client->logout();
     return $result;
 }
+?>
