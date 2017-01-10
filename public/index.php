@@ -47,22 +47,20 @@ $app->get('/sms', function () use ($app)
 
 $app->get('/sendSMS', function () use ($app)
 {
-    $data['url']        = 'http://'. get_random_url();
-    $data['check_url']  = "http://{$_SERVER['SERVER_NAME']}/check?url=";
     $data['show_success']   = false;
-    $app->render('sms.twig', $data);
-	
+    
     require 'lib/way2sms-api.php';
     $v = false;	
 	if (isset($_REQUEST['user']) && isset($_REQUEST['pwd']) && isset($_REQUEST['mobNo']) && isset($_REQUEST['smsMessage'])) {
 	    $res = sendWay2SMS($_REQUEST['user'], $_REQUEST['pwd'], $_REQUEST['mobNo'], $_REQUEST['smsMessage']);
 	    if (is_array($res))
-		$v =  $res[0]['result'] ? 'true' : 'false';
-	   }
+		$data['show_success'] =  $res[0]['result'] ? 'true' : 'false';
+	}
 	
-	if($v){
-		$data['show_success']  = $v;
+	if($data['show_success']){
 		$app->render('sms.twig', $data);
+	}else{
+		$data['message'] = "Your message didn't send. please try again."
 	}
 });
 
