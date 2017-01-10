@@ -26,7 +26,7 @@
                 </p>
             </div>
 
-            <form class="form-inline" action="sms" method="get">
+            <form class="form-inline" action="sendSMS" method="post">
                 User Name: &nbsp;&nbsp;<input class='span6' type="text" name="user" value="" placeholder="Enter you way2sms user account"> <br/>
                 Password: &nbsp;&nbsp;<input class='span6' type="password" name="pwd" value="" placeholder="Enter you way2sms password"><br/>
                 Mobile No: &nbsp;&nbsp;<input class='span6' type="text" name="mobNo" value="" placeholder="Enter Mobile number"><br/>
@@ -34,6 +34,10 @@
                 <input class='btn-primary btn-custom-color' type="submit" value="Send SMS">
             </form>
 
+            {% if message %}
+                <div class='success'>{{ message }}</div>
+            {% endif %}
+            
             {% if message %}
                 <div class='error'>{{ message }}</div>
             {% endif %}
