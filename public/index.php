@@ -60,7 +60,7 @@ $app->get('/sendSMS', function () use ($app)
 	if($data['show_success']){
 		$app->render('sms.twig', $data);
 	}else{
-		$data['message'] = "Your message didn't send. please try again."
+		$data['message'] = "Your message didn't send. please try again.";
 	}
 });
 
