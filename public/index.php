@@ -64,15 +64,13 @@ $app->post('/api/sendSMS', function () use ($app)
     $data = sendSMS(0);
 	$response->withHeader('Content-Type', 'application/json');
 	$response->write(json_encode($data));
-	return $response;
 });
 
-$app->post('/api/sendSMSMyAccount', function ($request, $response) use ($app)
+$app->post('/api/sendSMSMyAccount', function () use ($app)
 {
     $data = sendSMS(1);
-	$response->withHeader('Content-Type', 'application/json');
-	$response->write(json_encode($data));
-	return $response;
+	$app->response->withHeader('Content-Type', 'application/json');
+	$app->response->write(json_encode($data));
 });
 
 function sendSMS($i){
