@@ -49,26 +49,41 @@ $app->get('/sms', function () use ($app)
 
 $app->post('/sendSMS', function () use ($app)
 {
-    $data['show_success']   = false;    
-	if (isset($_REQUEST['user']) && isset($_REQUEST['pwd']) && isset($_REQUEST['mobNo']) && isset($_REQUEST['smsMessage'])) {
-	    $res = sendWay2SMS($_REQUEST['user'], $_REQUEST['pwd'], $_REQUEST['mobNo'], $_REQUEST['smsMessage']);
-	    if (is_array($res))
-		$data['show_success'] =  $res[0]['result'] ? true : false;
-	}
-	
-	if(!$data['show_success']){
-		$data['message'] = "Your message didn't send. please try again.";
-	}
+    $data = sendSMS(0);
 	$app->render('sms.twig', $data);
 });
 
 $app->post('/sendSMSMyAccount', function () use ($app)
 {
-    $data['show_success']   = false;    
-	if ( isset($_REQUEST['mobNo']) && isset($_REQUEST['smsMessage'])) {
-		$user = getenv('WAY2SMS_ACCONT_USER');
-		$pass = getenv('WAY2SMS_ACCONT_PASS');
+    $data = sendSMS(1);
+	$app->render('sms.twig', $data);
+});
+
+$app->post('/api/sendSMS', function () use ($app)
+{
+    $data = sendSMS(0);
+	$app->render('sms.twig', $data);
+});
+
+$app->post('/api/sendSMSMyAccount', function (ServerRequestInterface $request, ResponseInterface $response) use ($app)
+{
+    $data = sendSMS(1);
+	$app->render('sms.twig', $data);
+});
+
+function sendSMS($i){
+	$step = false;
+	$user = getenv('WAY2SMS_ACCONT_USER');
+	$pass = getenv('WAY2SMS_ACCONT_PASS');
 		
+	if(($i==0 && isset($_REQUEST['user']) && isset($_REQUEST['pwd'])) || $i==1) {
+		$step = true;
+		$user = (i==0) ? $_REQUEST['user'] : getenv('WAY2SMS_ACCONT_USER');
+		$pass = (i==0) ? $_REQUEST['pwd'] : getenv('WAY2SMS_ACCONT_PASS');
+	}
+	
+	$data['show_success']   = false;    
+	if ( $step && isset($_REQUEST['mobNo']) && isset($_REQUEST['smsMessage'])) {
 	    $res = sendWay2SMS($user, $pass, $_REQUEST['mobNo'], $_REQUEST['smsMessage']);
 	    if (is_array($res))
 		$data['show_success'] =  $res[0]['result'] ? true : false;
@@ -77,8 +92,8 @@ $app->post('/sendSMSMyAccount', function () use ($app)
 	if(!$data['show_success']){
 		$data['message'] = "Your message didn't send. please try again.";
 	}
-	$app->render('sms.twig', $data);
-});
+	return $data;
+}
 
 $app->get('/check', function () use ($app)
 {
