@@ -71,11 +71,11 @@ $app->post('/api/sendSMSMyAccount', function () use ($app)
 {
     $data = sendSMS(1);
 	//$app->response->withHeader('Content-Type', 'application/json');
-	//$app->response->write(json_encode($data));
+	//$app->response->body(json_encode($data));
 	$response = $app->response();
 	$response['Content-Type'] = 'application/json';
-	$response['X-Powered-By'] = 'Slim';
-	echo json_encode($data);
+	//echo json_encode($data);
+	$response->body(json_encode($data));
 });
 
 function sendSMS($i){
@@ -97,8 +97,12 @@ function sendSMS($i){
 	}
 	
 	if(!$data['show_success']){
+		$data['error'] = "true";
 		$data['message'] = "Your message didn't send. please try again.";
-	}
+	}else{
+		$data['message'] = "Your message has sent successfully.";
+		$data['success'] = "true";
+	}	
 	return $data;
 }
 
