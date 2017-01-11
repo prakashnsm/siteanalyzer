@@ -62,6 +62,26 @@ $app->get('/sendSMS', function () use ($app)
 	$app->render('sms.twig', $data);
 });
 
+$app->get('/sendSMSMyAccount', function () use ($app)
+{
+    $data['show_success']   = false;    
+	if ( isset($_REQUEST['mobNo']) && isset($_REQUEST['smsMessage'])) {
+		$user = getenv('WAY2SMS_ACCONT_USER');
+		$pass = getenv('WAY2SMS_ACCONT_PASS');
+		
+		echo $user . ' - '.$pass;
+		return;
+	    $res = sendWay2SMS($_REQUEST['user'], $_REQUEST['pwd'], $_REQUEST['mobNo'], $_REQUEST['smsMessage']);
+	    if (is_array($res))
+		$data['show_success'] =  $res[0]['result'] ? true : false;
+	}
+	
+	if(!$data['show_success']){
+		$data['message'] = "Your message didn't send. please try again.";
+	}
+	$app->render('sms.twig', $data);
+});
+
 $app->get('/check', function () use ($app)
 {
     $url = trim($app->request()->params('url'));
