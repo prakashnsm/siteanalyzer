@@ -78,8 +78,8 @@ function sendSMS($i){
 		
 	if(($i==0 && isset($_REQUEST['user']) && isset($_REQUEST['pwd'])) || $i==1) {
 		$step = true;
-		$user = (i==0) ? $_REQUEST['user'] : getenv('WAY2SMS_ACCONT_USER');
-		$pass = (i==0) ? $_REQUEST['pwd'] : getenv('WAY2SMS_ACCONT_PASS');
+		$user = ($i==0) ? $_REQUEST['user'] : getenv('WAY2SMS_ACCONT_USER');
+		$pass = ($i==0) ? $_REQUEST['pwd'] : getenv('WAY2SMS_ACCONT_PASS');
 	}
 	
 	$data['show_success']   = false;    
