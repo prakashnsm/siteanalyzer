@@ -47,7 +47,7 @@ $app->get('/sms', function () use ($app)
     $app->render('sms.twig', $data);
 });
 
-$app->get('/sendSMS', function () use ($app)
+$app->post('/sendSMS', function () use ($app)
 {
     $data['show_success']   = false;    
 	if (isset($_REQUEST['user']) && isset($_REQUEST['pwd']) && isset($_REQUEST['mobNo']) && isset($_REQUEST['smsMessage'])) {
@@ -62,16 +62,14 @@ $app->get('/sendSMS', function () use ($app)
 	$app->render('sms.twig', $data);
 });
 
-$app->get('/sendSMSMyAccount', function () use ($app)
+$app->post('/sendSMSMyAccount', function () use ($app)
 {
     $data['show_success']   = false;    
 	if ( isset($_REQUEST['mobNo']) && isset($_REQUEST['smsMessage'])) {
 		$user = getenv('WAY2SMS_ACCONT_USER');
 		$pass = getenv('WAY2SMS_ACCONT_PASS');
 		
-		echo $user . ' - '.$pass;
-		return;
-	    $res = sendWay2SMS($_REQUEST['user'], $_REQUEST['pwd'], $_REQUEST['mobNo'], $_REQUEST['smsMessage']);
+	    $res = sendWay2SMS($user, $pass, $_REQUEST['mobNo'], $_REQUEST['smsMessage']);
 	    if (is_array($res))
 		$data['show_success'] =  $res[0]['result'] ? true : false;
 	}
