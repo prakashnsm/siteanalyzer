@@ -62,15 +62,17 @@ $app->post('/sendSMSMyAccount', function () use ($app)
 $app->post('/api/sendSMS', function () use ($app)
 {
     $data = sendSMS(0);
-	//$app->render('sms.twig', $data);
-	$response->writeJson($data);
+	$response->withHeader('Content-Type', 'application/json');
+	$response->write(json_encode($data));
+	return $response;
 });
 
-$app->post('/api/sendSMSMyAccount', function (ServerRequestInterface $request, ResponseInterface $response) use ($app)
+$app->post('/api/sendSMSMyAccount', function ($request, $response) use ($app)
 {
     $data = sendSMS(1);
-	//return $data;
-	$response->writeJson($data);
+	$response->withHeader('Content-Type', 'application/json');
+	$response->write(json_encode($data));
+	return $response;
 });
 
 function sendSMS($i){
