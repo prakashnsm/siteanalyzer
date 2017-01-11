@@ -62,21 +62,20 @@ $app->post('/sendSMSMyAccount', function () use ($app)
 $app->post('/api/sendSMS', function () use ($app)
 {
     $data = sendSMS(0);
-	//$response->withHeader('Content-Type', 'application/json');
-	//$response->write(json_encode($data));
-	$app->response->headers->set('Content-Type', 'application/json');
+	responseJSON($app, $data);
 });
 
 $app->post('/api/sendSMSMyAccount', function () use ($app)
 {
     $data = sendSMS(1);
-	//$app->response->withHeader('Content-Type', 'application/json');
-	//$app->response->body(json_encode($data));
+	responseJSON($app, $data);
+});
+
+function responseJSON($app, $data){
 	$response = $app->response();
 	$response['Content-Type'] = 'application/json';
-	//echo json_encode($data);
 	$response->body(json_encode($data));
-});
+}
 
 function sendSMS($i){
 	$step = false;
