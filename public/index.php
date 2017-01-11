@@ -72,9 +72,10 @@ $app->post('/api/sendSMSMyAccount', function () use ($app)
     $data = sendSMS(1);
 	//$app->response->withHeader('Content-Type', 'application/json');
 	//$app->response->write(json_encode($data));
-	$app->response->headers->set('Content-Type', 'application/json');
-	$app->response->write(json_encode($data));
-	return json_encode($data);
+	$response = $app->response();
+	$response['Content-Type'] = 'application/json';
+	$response['X-Powered-By'] = 'Slim';
+	echo json_encode($data);
 });
 
 function sendSMS($i){
