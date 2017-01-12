@@ -206,7 +206,7 @@ function sendSMS160by2($uid, $pwd, $phone, $msg)
     return $result;
 }
 
-sendSMS160by2 ( '8825248400' , 'tsp231087' , '8825248400' , 'Hello World');
+//sendSMS160by2 ( '8825248400' , 'tsp231087' , '8825248400' , 'Hello World');
 
 ?>
 
