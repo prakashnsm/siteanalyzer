@@ -117,43 +117,28 @@ class SMS160BY2NewClient
 			$response = [];
 			$mh = curl_multi_init();
 			$response["".$p] = (object)[];
-			$this->curlArray[$i] = requestCurl($p, $msg);
+			$this->curlArray[$i] = $this->requestCurl($p, $msg);
 			curl_multi_add_handle($mh, $this->curlArray[$i]);
 		}
-		  $running = null;
-		  do {
+
+		$running = null;
+		do {
 			curl_multi_exec($mh, $running);
-		  } while($running > 0);
+		} while($running > 0);
 		 
 		 
-		  foreach($this->curlArray as $i => $c) {
+		foreach($this->curlArray as $i => $c) {
 			$res = curl_multi_getcontent($c);
 			curl_multi_remove_handle($mh, $c);
-			
-				//Check Message Status
-			$pos = strpos($contents, 'successfully');
-			$res = ($pos !== false) ? true : false;
-			$result[] = array('phone' => $pharr[$i], 'msg' => $msg, 'result' => "".$res);
 
-			//$data = json_decode($res);
-			//$d = json_decode($data->d);
-			//$data = $d->rows[0];
-			/*$response[$i]->data = array(
-								"user" => $users[$i+1]['username'],
-								"userid" => $users[$i+1]['userid'],
-								"points" => $data->EarnPaidClicks,
-								"pending" => $data->PendingPaidClicks,
-								"total" => $data->WorkAmount,
-								"date" => $data->AssignedDate,
-							);*/
-			
-			}
-        }
+			$pos = strpos($res, 'successfully');
+			$res = ($pos !== false) ? true : false;
+			$result[] = array('phone' => $pharr[$i], 'msg' => $msg, 'result' => "".$res);			
+		}
         return $result;
     }
 	
 	function requestCurl($p, $msg){
-		global $cookies;
 		$curl = curl_init();
 
 		curl_setopt_array($curl, array(
@@ -168,7 +153,7 @@ class SMS160BY2NewClient
 		  CURLOPT_HTTPHEADER => array(
 			"cache-control: no-cache",
 			"content-type: application/x-www-form-urlencoded",
-			'Cookie: '.$cookies[1][1].'; '.$cookies[0][1].''
+			'Cookie: '.$this->cookies[1][1].'; '.$this->cookies[0][1].''
 		  ),
 		));
 		return $curl;
@@ -180,10 +165,10 @@ class SMS160BY2NewClient
      */
     function logout()
     {
-        curl_setopt($this->curl, CURLOPT_URL, $this->way2smsHost . "LogOut");
+        curl_setopt($this->curl, CURLOPT_URL, "http://www.160by2.com/Logout");
         curl_setopt($this->curl, CURLOPT_REFERER, $this->refurl);
 		curl_setopt($this->curl, CURLOPT_HTTPHEADER, array(
-			'Cookie: '.$cookies[1][1].'; '.$cookies[0][1].''
+			'Cookie: '.$this->cookies[1][1].'; '.$this->cookies[0][1].''
 		  ));
         $text = curl_exec($this->curl);
         curl_close($this->curl);

@@ -80,13 +80,13 @@ function responseJSON($app, $data){
 
 function sendSMS($i){
 	$step = false;
-	$account = getenv('SMS_ACCONT') : 'WAY2SMS';
+	$account = getenv('SMS_ACCONT')? getenv('SMS_ACCONT') : 'WAY2SMS';
 	$user = getenv($account.'_ACCONT_USER');
 	$pass = getenv($account.'_ACCONT_PASS');
 		
 	if((isset($_REQUEST['user']) && isset($_REQUEST['pwd'])) || $i==1) {		
 		$step = true;
-		if(($i==0){
+		if($i==0){
 				$user = $_REQUEST['user'];
 				$pass = $_REQUEST['pwd'];
 		}
