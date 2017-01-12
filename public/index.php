@@ -11,6 +11,7 @@ require 'lib/http.php';
 require 'lib/site.php';
 
 require 'lib/way2sms-api.php';
+require 'lib/160by2-api/160by2-new-api.php';
 
 define('DATA_DIR', '../data/');
 define('LOG_DIR',  '../logs/');
@@ -79,20 +80,30 @@ function responseJSON($app, $data){
 
 function sendSMS($i){
 	$step = false;
-	$user = getenv('WAY2SMS_ACCONT_USER');
-	$pass = getenv('WAY2SMS_ACCONT_PASS');
+	$account = getenv('SMS_ACCONT') : 'WAY2SMS';
+	$user = getenv($account.'_ACCONT_USER');
+	$pass = getenv($account.'_ACCONT_PASS');
 		
-	if(($i==0 && isset($_REQUEST['user']) && isset($_REQUEST['pwd'])) || $i==1) {
+	if((isset($_REQUEST['user']) && isset($_REQUEST['pwd'])) || $i==1) {		
 		$step = true;
-		$user = ($i==0) ? $_REQUEST['user'] : getenv('WAY2SMS_ACCONT_USER');
-		$pass = ($i==0) ? $_REQUEST['pwd'] : getenv('WAY2SMS_ACCONT_PASS');
+		if(($i==0){
+				$user = $_REQUEST['user'];
+				$pass = $_REQUEST['pwd'];
+		}
 	}
 	
 	$data['show_success']   = false;    
 	if ( $step && isset($_REQUEST['mobNo']) && isset($_REQUEST['smsMessage'])) {
-	    $res = sendWay2SMS($user, $pass, $_REQUEST['mobNo'], $_REQUEST['smsMessage']);
-	    if (is_array($res))
-		$data['show_success'] =  $res[0]['result'] ? true : false;
+		$res=0;
+		if($account == 'WAY2SMS'){
+			$res = sendWay2SMS($user, $pass, $_REQUEST['mobNo'], $_REQUEST['smsMessage']);
+		}
+	    else if($account == '160BY2'){
+			$res = sendSMS160by2($user, $pass, $_REQUEST['mobNo'], $_REQUEST['smsMessage']);
+		}
+	    if (is_array($res)){
+			$data['show_success'] =  $res[0]['result'] ? true : false;
+		}
 	}
 	
 	if(!$data['show_success']){

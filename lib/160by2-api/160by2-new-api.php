@@ -120,67 +120,58 @@ class SMS160BY2NewClient
 			$this->curlArray[$i] = requestCurl($p, $msg);
 			curl_multi_add_handle($mh, $this->curlArray[$i]);
 		}
-  $running = null;
-  do {
-    curl_multi_exec($mh, $running);
-  } while($running > 0);
- 
- 
-  foreach($this->curlArray as $i => $c) {
-    $res = curl_multi_getcontent($c);
-    curl_multi_remove_handle($mh, $c);
-	//$data = json_decode($res);
-	//$d = json_decode($data->d);
-	//$data = $d->rows[0];
-	/*$response[$i]->data = array(
-						"user" => $users[$i+1]['username'],
-						"userid" => $users[$i+1]['userid'],
-						"points" => $data->EarnPaidClicks,
-						"pending" => $data->PendingPaidClicks,
-						"total" => $data->WorkAmount,
-						"date" => $data->AssignedDate,
-					);*/
-	
-  }
-  
-            // Setup to send SMS
-            curl_setopt($this->curl, CURLOPT_URL, $this->way2smsHost . 'smstoss.action');
-            curl_setopt($this->curl, CURLOPT_REFERER, curl_getinfo($this->curl, CURLINFO_EFFECTIVE_URL));
-            curl_setopt($this->curl, CURLOPT_POST, 1);
+		  $running = null;
+		  do {
+			curl_multi_exec($mh, $running);
+		  } while($running > 0);
+		 
+		 
+		  foreach($this->curlArray as $i => $c) {
+			$res = curl_multi_getcontent($c);
+			curl_multi_remove_handle($mh, $c);
+			
+				//Check Message Status
+			$pos = strpos($contents, 'successfully');
+			$res = ($pos !== false) ? true : false;
+			$result[] = array('phone' => $pharr[$i], 'msg' => $msg, 'result' => "".$res);
 
-            curl_setopt($this->curl, CURLOPT_POSTFIELDS, "ssaction=ss&Token=" . $this->jstoken . "&mobile=" . $p . "&message=" . $msg . "&button=Login");
-            $contents = curl_exec($this->curl);
-
-            //Check Message Status
-            $pos = strpos($contents, 'Message has been submitted successfully');
-            $res = ($pos !== false) ? true : false;
-            $result[] = array('phone' => $p, 'msg' => $msg, 'result' => $res);
+			//$data = json_decode($res);
+			//$d = json_decode($data->d);
+			//$data = $d->rows[0];
+			/*$response[$i]->data = array(
+								"user" => $users[$i+1]['username'],
+								"userid" => $users[$i+1]['userid'],
+								"points" => $data->EarnPaidClicks,
+								"pending" => $data->PendingPaidClicks,
+								"total" => $data->WorkAmount,
+								"date" => $data->AssignedDate,
+							);*/
+			
+			}
         }
         return $result;
     }
 	
 	function requestCurl($p, $msg){
+		global $cookies;
 		$curl = curl_init();
 
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "http://www.160by2.com/SendSMSDec19",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "hid_exists=yes&fkapps=SendSMSDec19&newsUrl=&pageContext=normal&linkrs=&hidSessionId=AFFF8DB52F7B4CD601CCD9C6C981ABA1.8505&msgLen=140&maxwellapps=AFFF8DB52F7B4CD601CCD9C6C981ABA1.8505&feb2by2action=sa65sdf656fdfd&AFWVG=&HERKSI=8825248400&sendSMSMsg=1233242jkhjkhkj&newsExtnUrl=&ulCategories=28",
-  CURLOPT_HTTPHEADER => array(
-    "cache-control: no-cache",
-    "content-type: application/x-www-form-urlencoded",
-    "cookie: JSESSIONID=EE~AFFF8DB52F7B4CD601CCD9C6C981ABA1.8505;LastLoginCookie=\"12-01-2017-901-11:23-901-mozilla firefox 3.0.5-901-122.178.98.127-901-19-01-2011\"",
-    "postman-token: 89cff825-bbb8-dcbf-84fc-d0be3d811180"
-  ),
-));
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
+		curl_setopt_array($curl, array(
+		  CURLOPT_URL => "http://www.160by2.com/SendSMSDec19",
+		  CURLOPT_RETURNTRANSFER => true,
+		  CURLOPT_ENCODING => "",
+		  CURLOPT_MAXREDIRS => 10,
+		  CURLOPT_TIMEOUT => 30,
+		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		  CURLOPT_CUSTOMREQUEST => "POST",
+		  CURLOPT_POSTFIELDS => 'hid_exists=yes&fkapps=SendSMSDec19&newsUrl=&pageContext=normal&linkrs=&hidSessionId='.$this->id.'&msgLen=140&maxwellapps='.$this->id.'&feb2by2action=sa65sdf656fdfd&'.$this->ids[0].'=&'.$this->ids[1].'='.$p.'&sendSMSMsg='.$msg.'&newsExtnUrl=&ulCategories=28',
+		  CURLOPT_HTTPHEADER => array(
+			"cache-control: no-cache",
+			"content-type: application/x-www-form-urlencoded",
+			'Cookie: '.$cookies[1][1].'; '.$cookies[0][1].''
+		  ),
+		));
+		return $curl;
 	}
 
 
@@ -191,6 +182,9 @@ $err = curl_error($curl);
     {
         curl_setopt($this->curl, CURLOPT_URL, $this->way2smsHost . "LogOut");
         curl_setopt($this->curl, CURLOPT_REFERER, $this->refurl);
+		curl_setopt($this->curl, CURLOPT_HTTPHEADER, array(
+			'Cookie: '.$cookies[1][1].'; '.$cookies[0][1].''
+		  ));
         $text = curl_exec($this->curl);
         curl_close($this->curl);
     }
@@ -222,17 +216,9 @@ function sendSMS160by2($uid, $pwd, $phone, $msg)
 {
     $client = new SMS160BY2NewClient();
     $client->login($uid, $pwd);
-    //echo $client->htmlText;
-
-    
-    $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
-
-fwrite($myfile, $client->htmlText);
-    
-    var_dump($client);
-    //$result = $client->send($phone, $msg);
-    //$client->logout();
-    //return $result;
+    $result = $client->send($phone, $msg);
+    $client->logout();
+    return $result;
 }
 
 sendSMS160by2 ( '8825248400' , 'tsp231087' , '8825248400' , 'Hello World');
