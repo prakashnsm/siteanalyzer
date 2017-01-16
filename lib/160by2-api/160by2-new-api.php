@@ -116,7 +116,7 @@ class SMS160BY2NewClient
         $pharr = explode(",", $phone);
 
         // Send SMS to each number
-        foreach ($pharr as $i=>$p) {
+        foreach ($pharr as $i => $p) {
             // Check the mobile number
             if (strlen($p) != 10 || !is_numeric($p) || strpos($p, ".") != false) {
                 $result[] = array('phone' => $p, 'msg' => $msg, 'result' => "invalid number");
@@ -138,6 +138,7 @@ class SMS160BY2NewClient
 		 
 		foreach($this->curlArray as $i => $c) {
 			$res = curl_multi_getcontent($c);
+
 			$pos = strpos($res, 'successfully');
 			$val = ($pos !== false) ? true : false;
 			$result[] = array('phone' => $pharr[$i], 'msg' => $msg, 'result' => "$val", 'response' => $res);	
@@ -198,7 +199,10 @@ function sendSMS160by2($uid, $pwd, $phone, $msg)
     $client = new SMS160BY2NewClient();
     $client->login($uid, $pwd);
     $result = $client->send($phone, $msg);
-    $client->logout();
+    //$client->logout();
+	
+	echo '<PRE>'; var_dump($client);echo '</PRE>';
+	
     return $result;
 }
 
