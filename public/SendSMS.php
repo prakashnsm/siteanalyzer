@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
 require '../lib/way2sms-api.php';
 require '../lib/160by2-api/160by2-new-api.php';
 
