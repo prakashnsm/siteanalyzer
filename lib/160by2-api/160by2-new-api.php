@@ -54,11 +54,6 @@ class SMS160BY2NewClient
         // Check if any error occured
         if (curl_errno($this->curl))
             return "access error : " . curl_error($this->curl);
-	
-		echo "<<<<<<<<<<<<<<<<<<<<<<<< MATCHES & COOKIES >>>>>>>>>>>>>>>>>>>>>>>>";
-		print_r($this->matches);
-		print_r($this->cookies);
-		echo ">>>>>>>>>>>>>>>>>>>>>>>> MATCHES & COOKIES <<<<<<<<<<<<<<<<<<<<<<<<<";
 		
         $this->refurl = trim ($this->matches[0][1]);
 		$newUrlData = parse_url($this->refurl );
@@ -146,8 +141,8 @@ class SMS160BY2NewClient
 			curl_multi_remove_handle($mh, $c);
 
 			$pos = strpos($res, 'successfully');
-			$res = ($pos !== false) ? true : false;
-			$result[] = array('phone' => $pharr[$i], 'msg' => $msg, 'result' => "".$res);			
+			$val = ($pos !== false) ? true : false;
+			$result[] = array('phone' => $pharr[$i], 'msg' => $msg, 'result' => "".$val, 'response' => "".$res);			
 		}
         return $result;
     }
@@ -190,26 +185,9 @@ class SMS160BY2NewClient
 
 }
 
-/*
-$cookies = array();
-$matches = array();
-
-function curlResponseHeaderCallback($ch, $headerLine) {
-    global $cookies;
-	global $matches;
-	if (preg_match('/Location: (.*)/mi', $headerLine, $match) == 1){
-		$matches[] = $match;	
-	}
-	if (preg_match('/^Set-Cookie:\s*([^;]*)/mi', $headerLine, $cookie) == 1){
-		$cookies[] = $cookie;
-	}
-	return strlen($headerLine); 
-}
-*/
-
 /**
- * Helper Function to send to sms to single/multiple people via way2sms
- * @example sendSMS160by2 ( '9000012345' , 'password' , '987654321,9876501234' , 'Hello World')
+ * Helper Function to send to sms to single/multiple people via 16by2
+ * @example sendSMS160by2 ( '9043218400' , 'password' , '8825248400,9043218400' , 'Hello World')
  */
 
 function sendSMS160by2($uid, $pwd, $phone, $msg)
