@@ -36,9 +36,7 @@
 
             {% if show_success %}
                 <div class='success'> Your message has sent successfully. </div>
-            {% endif %}
-            
-            {% if !show_success %}
+            {% else %}
                 <div class='error'>{{ message }}</div>
             {% endif %}
 

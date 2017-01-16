@@ -131,9 +131,8 @@ class SMS160BY2NewClient
 		}
 
 		$running = null;
-		$resp = [];
 		do {
-			$resp[] = curl_multi_exec($mh, $running);
+			curl_multi_exec($mh, $running);
 		} while($running > 0);
 		 
 		 
@@ -142,7 +141,7 @@ class SMS160BY2NewClient
 
 			$pos = strpos($res, 'successfully');
 			$val = ($pos !== false) ? true : false;
-			$result[$i] = array('phone' => $pharr[$i], 'msg' => $msg, 'result' => "$val", 'response' => $resp[$i]);	
+			$result[] = array('phone' => $pharr[$i], 'msg' => $msg, 'result' => "$val", 'response' => $res);	
 
 			curl_multi_remove_handle($mh, $c);
 			curl_close($c);			
@@ -159,10 +158,11 @@ class SMS160BY2NewClient
 		curl_setopt_array($curl, array(
 		  CURLOPT_URL => "http://www.160by2.com/SendSMSDec19",
 		  CURLOPT_RETURNTRANSFER => true,
-		  CURLOPT_MAXREDIRS => 10,
+		  /*CURLOPT_MAXREDIRS => 10,*/
 		  CURLOPT_TIMEOUT => 30,
 		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 		  CURLOPT_CUSTOMREQUEST => "POST",
+		  CURLOPT_HEADER => 0,
 		  CURLOPT_POSTFIELDS => 'hid_exists=yes&fkapps=SendSMSDec19&newsUrl=&pageContext=normal&linkrs=&hidSessionId='.$this->id.'&msgLen=140&maxwellapps='.$this->id.'&feb2by2action=sa65sdf656fdfd&'.$this->ids[0].'=&'.$this->ids[1].'='.$p.'&sendSMSMsg='.$msg.'&newsExtnUrl=&ulCategories=28',
 		  CURLOPT_HTTPHEADER => array(
 			"cache-control: no-cache",
@@ -200,10 +200,7 @@ function sendSMS160by2($uid, $pwd, $phone, $msg)
     $client = new SMS160BY2NewClient();
     $client->login($uid, $pwd);
     $result = $client->send($phone, $msg);
-    //$client->logout();
-	
-	echo '<PRE>'; var_dump($client);echo '</PRE>';
-	
+    $client->logout();
     return $result;
 }
 
