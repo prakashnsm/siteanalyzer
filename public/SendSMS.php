@@ -1,7 +1,7 @@
 <?php
 
-require 'lib/way2sms-api.php';
-require 'lib/160by2-api/160by2-new-api.php';
+require '../lib/way2sms-api.php';
+require '../lib/160by2-api/160by2-new-api.php';
 
 
 $account = $_REQUEST['acc'] ? $_REQUEST['acc'] : 0;
