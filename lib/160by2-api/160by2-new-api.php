@@ -131,8 +131,9 @@ class SMS160BY2NewClient
 		}
 
 		$running = null;
+		$resp = [];
 		do {
-			curl_multi_exec($mh, $running);
+			$resp[] = curl_multi_exec($mh, $running);
 		} while($running > 0);
 		 
 		 
@@ -141,7 +142,7 @@ class SMS160BY2NewClient
 
 			$pos = strpos($res, 'successfully');
 			$val = ($pos !== false) ? true : false;
-			$result[] = array('phone' => $pharr[$i], 'msg' => $msg, 'result' => "$val", 'response' => $res);	
+			$result[$i] = array('phone' => $pharr[$i], 'msg' => $msg, 'result' => "$val", 'response' => $resp[$i]);	
 
 			curl_multi_remove_handle($mh, $c);
 			curl_close($c);			
