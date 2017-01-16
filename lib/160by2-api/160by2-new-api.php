@@ -22,6 +22,7 @@ class SMS160BY2NewClient
     var $ids;
     var $id;
 	var $cookies;
+	var $matches;
 	var $curlArray = [];
 
     /**
@@ -46,31 +47,27 @@ class SMS160BY2NewClient
         curl_setopt($this->curl, CURLINFO_HEADER_OUT, true);
                 
         curl_setopt($this->curl, CURLOPT_HTTPHEADER , array("content-type: application/x-www-form-urlencoded"));
-        curl_setopt($this->curl, CURLOPT_HEADERFUNCTION, "curlResponseHeaderCallback");
+        curl_setopt($this->curl, CURLOPT_HEADERFUNCTION, array($this, 'curlResponseHeaderCallback')); //"curlResponseHeaderCallback");
 		
 		$this->htmlText = curl_exec($this->curl);
 
         // Check if any error occured
         if (curl_errno($this->curl))
             return "access error : " . curl_error($this->curl);
-
-		global $cookies;
-		global $matches;
 	
 		echo "<<<<<<<<<<<<<<<<<<<<<<<< MATCHES & COOKIES >>>>>>>>>>>>>>>>>>>>>>>>";
-		print_r($matches);
-		print_r($cookies);
+		print_r($this->matches);
+		print_r($this->cookies);
 		echo ">>>>>>>>>>>>>>>>>>>>>>>> MATCHES & COOKIES <<<<<<<<<<<<<<<<<<<<<<<<<";
 		
-        $this->refurl = trim ($matches[0][1]);
+        $this->refurl = trim ($this->matches[0][1]);
 		$newUrlData = parse_url($this->refurl );
 		
 		$this->id = str_replace("id=", "", $newUrlData['query']);
 		$this->newurl = $newUrlData['scheme'].'://'.$newUrlData['host'].'/SendSMS?'.$newUrlData['query'];
-		$this->cookies = $cookies;
 		curl_setopt($this->curl, CURLOPT_HTTPHEADER , array(
                                     'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-									'Cookie: '.$cookies[1][1].'; '.$cookies[0][1].'',									
+									'Cookie: '.$this->cookies[1][1].'; '.$this->cookies[0][1].'',									
 									'Host: www.160by2.com',
 									'Upgrade-Insecure-Requests: 1',
 									'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
@@ -93,6 +90,17 @@ class SMS160BY2NewClient
         return true;
     }
 
+
+	
+	function curlResponseHeaderCallback($ch, $headerLine) {
+		if (preg_match('/Location: (.*)/mi', $headerLine, $match) == 1){
+			$this->matches[] = $match;	
+		}
+		if (preg_match('/^Set-Cookie:\s*([^;]*)/mi', $headerLine, $cookie) == 1){
+			$this->cookies[] = $cookie;
+		}
+		return strlen($headerLine); 
+	}
 
     /**
      * @param $phone
@@ -182,7 +190,7 @@ class SMS160BY2NewClient
 
 }
 
-
+/*
 $cookies = array();
 $matches = array();
 
@@ -197,6 +205,7 @@ function curlResponseHeaderCallback($ch, $headerLine) {
 	}
 	return strlen($headerLine); 
 }
+*/
 
 /**
  * Helper Function to send to sms to single/multiple people via way2sms
