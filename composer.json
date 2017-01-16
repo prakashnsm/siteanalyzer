@@ -1,5 +1,10 @@
 {
     "require": {
         "ext-mbstring": "*"
-    }
+    },
+    "config": {
+        "preferred-install": "dist",
+		"bin-dir": "vendor/bin/",
+		"secure-http": false
+    }   
 }
