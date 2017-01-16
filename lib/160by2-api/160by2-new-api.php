@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 
 include_once('160by2-html-parser.php');
 /**
@@ -39,7 +41,7 @@ class SMS160BY2NewClient
         curl_setopt($this->curl, CURLOPT_URL, "http://www.160by2.com/re-login");
         curl_setopt($this->curl, CURLOPT_POST, true);
 		curl_setopt($this->curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($this->curl, CURLOPT_POSTFIELDS, "rssData=&username=8825248400&&password=tsp231087");
+        curl_setopt($this->curl, CURLOPT_POSTFIELDS, "rssData=&username=$uid&&password=$pwd");
         curl_setopt($this->curl, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; rv:1.9.0.5) Gecko/2008120122 Firefox/3.0.5");
         curl_setopt($this->curl, CURLOPT_CONNECTTIMEOUT, 60);
         curl_setopt($this->curl, CURLOPT_REFERER, "http://www.160by2.com");
