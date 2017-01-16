@@ -54,6 +54,9 @@ class SMS160BY2NewClient
         if (curl_errno($this->curl))
             return "access error : " . curl_error($this->curl);
 
+		global $cookies;
+		global $matches;
+	
 		echo "<<<<<<<<<<<<<<<<<<<<<<<< MATCHES & COOKIES >>>>>>>>>>>>>>>>>>>>>>>>";
 		print_r($matches);
 		print_r($cookies);
