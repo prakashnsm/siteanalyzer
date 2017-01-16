@@ -138,12 +138,16 @@ class SMS160BY2NewClient
 		 
 		foreach($this->curlArray as $i => $c) {
 			$res = curl_multi_getcontent($c);
-			curl_multi_remove_handle($mh, $c);
-
 			$pos = strpos($res, 'successfully');
 			$val = ($pos !== false) ? true : false;
-			$result[] = array('phone' => $pharr[$i], 'msg' => $msg, 'result' => "".$val, 'response' => "".$res);			
+			$result[] = array('phone' => $pharr[$i], 'msg' => $msg, 'result' => "$val", 'response' => $res);	
+
+			curl_multi_remove_handle($mh, $c);
+			curl_close($c);			
 		}
+		
+		curl_multi_close($mh);
+			
         return $result;
     }
 	
@@ -153,7 +157,6 @@ class SMS160BY2NewClient
 		curl_setopt_array($curl, array(
 		  CURLOPT_URL => "http://www.160by2.com/SendSMSDec19",
 		  CURLOPT_RETURNTRANSFER => true,
-		  CURLOPT_ENCODING => "",
 		  CURLOPT_MAXREDIRS => 10,
 		  CURLOPT_TIMEOUT => 30,
 		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
