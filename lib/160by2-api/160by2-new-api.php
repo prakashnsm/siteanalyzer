@@ -31,9 +31,6 @@ class SMS160BY2NewClient
      */
     function login($username, $password)
     {
-		global $cookies;
-		global $matches;
-	
         $this->curl = curl_init();
         $uid = urlencode($username);
         $pwd = urlencode($password);
@@ -48,9 +45,7 @@ class SMS160BY2NewClient
         curl_setopt($this->curl, CURLOPT_HEADER, true);
         curl_setopt($this->curl, CURLINFO_HEADER_OUT, true);
                 
-        curl_setopt($this->curl, CURLOPT_HTTPHEADER , array(
-                                    "content-type: application/x-www-form-urlencoded"
-                                  ));
+        curl_setopt($this->curl, CURLOPT_HTTPHEADER , array("content-type: application/x-www-form-urlencoded"));
         curl_setopt($this->curl, CURLOPT_HEADERFUNCTION, "curlResponseHeaderCallback");
 		
 		$this->htmlText = curl_exec($this->curl);
@@ -59,6 +54,11 @@ class SMS160BY2NewClient
         if (curl_errno($this->curl))
             return "access error : " . curl_error($this->curl);
 
+		echo "<<<<<<<<<<<<<<<<<<<<<<<< MATCHES & COOKIES >>>>>>>>>>>>>>>>>>>>>>>>";
+		print_r($matches);
+		print_r($cookies);
+		echo ">>>>>>>>>>>>>>>>>>>>>>>> MATCHES & COOKIES <<<<<<<<<<<<<<<<<<<<<<<<<";
+		
         $this->refurl = trim ($matches[0][1]);
 		$newUrlData = parse_url($this->refurl );
 		
