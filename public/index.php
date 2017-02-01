@@ -44,6 +44,8 @@ $app->get('/sms', function () use ($app)
     $data['url']        = 'http://'. get_random_url();
     $data['check_url']  = "http://{$_SERVER['SERVER_NAME']}/check?url=";
     $data['show_try']   = true;
+	$account = getenv('SMS_ACCONT')? getenv('SMS_ACCONT') : 'WAY2SMS';
+	$data['account'] = $account;
 
     $app->render('sms.twig', $data);
 });
