@@ -86,6 +86,7 @@ function sendSMS($i){
 	$user = getenv($account.'_ACCONT_USER');
 	$pass = getenv($account.'_ACCONT_PASS');
 		
+	$data['account'] = $account;
 	if((isset($_REQUEST['user']) && isset($_REQUEST['pwd'])) || $i==1) {		
 		$step = true;
 		if($i==0){
@@ -94,7 +95,7 @@ function sendSMS($i){
 		}
 	}
 	
-	$data['show_success']   = false;    
+	$data['show_success']   = false;	
 	if ( $step && isset($_REQUEST['mobNo']) && isset($_REQUEST['smsMessage'])) {
 		$res=0;
 		if($account == 'WAY2SMS'){
